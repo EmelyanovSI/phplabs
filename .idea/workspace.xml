@@ -71,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab1/form1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="144" column="16" lean-forward="true" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
+            <state relative-caret-position="444">
+              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
             </state>
           </provider>
         </entry>
@@ -158,8 +158,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="12" />
+    <option name="y" value="19" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -268,7 +268,7 @@
       <workItem from="1551692041626" duration="9651000" />
       <workItem from="1551732824218" duration="16306000" />
       <workItem from="1551784410256" duration="20115000" />
-      <workItem from="1551818941977" duration="2773000" />
+      <workItem from="1551818941977" duration="3114000" />
     </task>
     <task id="LOCAL-00001" summary="First commit of phpLabs">
       <created>1551821798142</created>
@@ -277,11 +277,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551821798142</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Second commit of phpLabs&#10;How it work?..">
+      <created>1551822602376</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551822602376</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100235000" />
+    <option name="totallyTimeSpent" value="100576000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -294,7 +301,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -349,7 +355,8 @@
       <path value="$PROJECT_DIR$/phpLabs" />
     </ignored-roots>
     <MESSAGE value="First commit of phpLabs" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit of phpLabs" />
+    <MESSAGE value="Second commit of phpLabs&#10;How it work?.." />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit of phpLabs&#10;How it work?.." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../!Univer/phplab1Kostia/style.css">
@@ -609,8 +616,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1/form1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="144" column="16" lean-forward="true" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
+        <state relative-caret-position="444">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
