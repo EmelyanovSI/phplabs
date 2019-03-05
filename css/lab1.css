@@ -1,0 +1,55 @@
+.forms {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    /*padding: 20px;*/
+    /*width: calc(100% - 40px);*/
+    background: #2f3640;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px;
+    margin: 10px;
+    background: white;
+    color: #50ac5c;
+    border: 2px solid #50ac5c;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.4s;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: #50ac5c;
+    color: white;
+}
+
+form {
+    padding: 20px 40px;
+    background: #999999;
+}
+fieldset {
+
+    padding: 20px;
+    color: white;
+    border: none;
+    background: #2f3640;
+}
+legend {
+    color: #50bc5c;
+}
+
+fieldset input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    color: #2f3640;
+    background: #f1f3f4;
+    font-weight: bolder;
+    margin: 10px;
+    text-align: center;
+}
