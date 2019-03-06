@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c155df1-dd8b-4a3f-b78a-de46189572e3" name="Default Changelist" comment="Third commit of phpLabs&#10;with .gitignore">
+    <list default="true" id="0c155df1-dd8b-4a3f-b78a-de46189572e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3757">
-              <caret line="221" column="84" selection-start-line="221" selection-start-column="84" selection-end-line="221" selection-end-column="84" />
+            <state relative-caret-position="553">
+              <caret line="208" column="80" selection-start-line="208" selection-start-column="80" selection-end-line="208" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -342,7 +342,7 @@
       <workItem from="1551818941977" duration="3114000" />
       <workItem from="1551823376788" duration="1076000" />
       <workItem from="1551878746397" duration="10000" />
-      <workItem from="1551885016675" duration="3171000" />
+      <workItem from="1551885016675" duration="4328000" />
     </task>
     <task id="LOCAL-00001" summary="First commit of phpLabs">
       <created>1551821798142</created>
@@ -365,11 +365,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551823606219</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit of phpLabs&#10;with .gitignore&#10;2nd day">
+      <created>1551889637682</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551889637682</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104833000" />
+    <option name="totallyTimeSpent" value="105990000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -382,6 +389,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28895614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -464,7 +472,8 @@
     <MESSAGE value="First commit of phpLabs" />
     <MESSAGE value="Second commit of phpLabs&#10;How it work?.." />
     <MESSAGE value="Third commit of phpLabs&#10;with .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Third commit of phpLabs&#10;with .gitignore" />
+    <MESSAGE value="Commit of phpLabs&#10;with .gitignore&#10;2nd day" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit of phpLabs&#10;with .gitignore&#10;2nd day" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../!Univer/phplab1Kostia/index.php">
@@ -728,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
-          <caret line="221" column="84" selection-start-line="221" selection-start-column="84" selection-end-line="221" selection-end-column="84" />
+        <state relative-caret-position="553">
+          <caret line="208" column="80" selection-start-line="208" selection-start-column="80" selection-end-line="208" selection-end-column="80" />
         </state>
       </provider>
     </entry>
