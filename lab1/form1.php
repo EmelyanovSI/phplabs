@@ -21,10 +21,10 @@
                 <span class="FIO">Emelyanov Sergey Igorevich</span>
                 <span class="option">Option16</span>
             </div>
-            <div id="searchBox">
+            <form id="searchBox" action="res1.php">
                 <input id="searchText" type="search" name="searchText" placeholder="Search for labs!" autofocus>
                 <button id="searchBtn" type="button" value="search"><i class="fas fa-search"></i></button>
-            </div>
+            </form>
         </div>
         <nav class="navHeader">
             <ul class="mainMenu">
@@ -51,16 +51,10 @@
 
     <main>
         <div class="forms">
-            <form  class="form1" name="form11" action="res1.php">
+            <form name="form11" action="res1.php">
                 <fieldset>
                     <legend>АССОРТИМЕНТ(R)</legend>
 
-                    <!--****************************-->
-                    <label for="search">Поиск:</label>
-                    <input id="search" name="search" type="search" placeholder="surfing">
-                    <br>
-
-                    <!--****************************-->
                     <label for="name">Наименование</label>
                     <input id="name" name="name" type="text" size="13" placeholder="Иванов" required><span></span>
                     <br>
@@ -95,12 +89,10 @@
                 <input type="reset" class="rest" value="Очистить">
             </form>
 
-            <form class="form1" name="form12" action="">
+            <form name="form12" action="">
                 <fieldset>
                     <legend>АССОРТИМЕНТ</legend>
-                    <label for="search">Поиск:</label>
-                    <input id="search" name="search" type="search" placeholder="surfing">
-                    <br>
+
                     <label for="">Наименование</label>
                     <input id="familiaglav" type="text" size="13" placeholder="Иванов" required><span></span>
 
@@ -145,6 +137,8 @@
             </a>
         </span>
     </footer>
+
+    <script src="../js/main.js" type="text/javascript" language="JavaScript"></script>
 
     </body>
 
