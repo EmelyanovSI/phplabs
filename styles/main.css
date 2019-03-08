@@ -302,3 +302,14 @@ footer a:active {
     animation-iteration-count: 1;
 }
 /***************************/
+/*********Scrollbar*********/
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #2f3640;
+}
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+/***************************/

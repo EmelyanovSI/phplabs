@@ -5,8 +5,8 @@
     <head>
         <title>phpLabs</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
               integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
               crossorigin="anonymous">
@@ -20,10 +20,10 @@
                 <span class="FIO">Emelyanov Sergey Igorevich</span>
                 <span class="option">Option16</span>
             </div>
-            <div id="searchBox">
+            <form id="searchBox" action="" method="get">
                 <input id="searchText" type="search" name="searchText" placeholder="Search for labs!" autofocus>
                 <button id="searchBtn" type="button" value="search"><i class="fas fa-search"></i></button>
-            </div>
+            </form>
         </div>
         <nav class="navHeader">
             <ul class="mainMenu">
@@ -61,7 +61,7 @@
         </span>
     </footer>
 
-    <script src="js/main.js" type="text/javascript" language="JavaScript"></script>
+    <script src="scripts/main.js" type="text/javascript" language="JavaScript"></script>
 
     </body>
 

@@ -47,3 +47,13 @@ txt.addEventListener("focusout", function () {
     btn.style.boxShadow = "none";
     search = false;
 });
+
+//lab1
+function showPrice() {
+    document.getElementById('price1').addEventListener('change', () => {
+        document.getElementById('showPrice1').textContent = document.getElementById('price1').value;
+    });
+    document.getElementById('price2').addEventListener('change', () => {
+        document.getElementById('showPrice2').textContent = document.getElementById('price2').value;
+    });
+}

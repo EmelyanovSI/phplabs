@@ -5,7 +5,7 @@
     background: #2f3640;
     border-radius: 5px;
 }
-form {
+main form {
     padding: 20px 40px;
     margin: 20px;
     background: #2f3640;
@@ -18,14 +18,41 @@ fieldset {
     color: white;
     border: none;
     background: #2f3640;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-legend {
+fieldset legend {
     color: #50bc5c;
     font-weight: bold;
+}
+fieldset input,
+fieldset select {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    color: #2f3640;
+    background: #f1f3f4;
+    font-weight: bolder;
+    margin: 10px;
+    text-align: center;
+    text-align-last: center;
+}
+fieldset label,
+fieldset span{
+    text-align: center;
+}
+fieldset input[type="checkbox"],
+fieldset input[type="radio"]{
+    height: inherit;
+    width: inherit;
 }
 
 input[type="submit"],
 input[type="reset"] {
+    outline: none;
     padding: 10px;
     margin: 10px;
     background: #2f3640;
@@ -43,15 +70,24 @@ input[type="reset"]:hover {
     color: #2f3640;
 }
 
-fieldset input {
-    outline: none;
-    border: none;
+table {
+    padding: 20px;
+    margin: 20px;
     border-radius: 5px;
-    height: 30px;
-    width: 200px;
-    color: #2f3640;
-    background: #f1f3f4;
-    font-weight: bolder;
-    margin: 10px;
+    background: #2f3640;
+    color: white;
     text-align: center;
+    cursor: pointer;
+}
+th {
+    padding: 10px 10px;
+    color: #50fc5c;
+}
+td:hover {
+    transition: 0.4s;
+    color: #50fc5c;
+}
+
+.searchP {
+    font-size: 4em;
 }
