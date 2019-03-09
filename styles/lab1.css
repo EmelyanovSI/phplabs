@@ -29,8 +29,6 @@ fieldset legend {
 fieldset input,
 fieldset select {
     outline: none;
-    border: none;
-    border-radius: 5px;
     height: 30px;
     width: 200px;
     color: #2f3640;
@@ -39,6 +37,10 @@ fieldset select {
     margin: 10px;
     text-align: center;
     text-align-last: center;
+    border: 5px solid #f1f3f4;
+    border-radius: 5px;
+    border-left: 3px solid;
+    transition: border-color 0.5s ease-out;
 }
 fieldset label,
 fieldset span{
@@ -48,6 +50,18 @@ fieldset input[type="checkbox"],
 fieldset input[type="radio"]{
     height: inherit;
     width: inherit;
+}
+fieldset input:optional,
+fieldset select:optional {
+    border-left-color: #999;
+}
+fieldset input:required,
+fieldset select:required {
+    border-left-color: #50fc5c;
+}
+fieldset input:invalid,
+fieldset select:invalid {
+    border-left-color: salmon;
 }
 
 input[type="submit"],
