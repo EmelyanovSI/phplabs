@@ -132,27 +132,29 @@
         </div>
 
         <?php
-        $shoes = "";
-        $number = "";
-        /*foreach ($_GET['shoes'] as $value)
-            $shoes .= $value."<br>";
-        foreach ($_GET['number'] as $value)
-            $number .= $value."<br>";*/ // doesnt work
-        $table = "<table>";
+        if (!empty($_GET)) {
+            $shoes = "";
+            $number = "";
+            foreach ($_GET['shoes'] as $value)
+                $shoes .= $value . "<br>";
+            foreach ($_GET['number'] as $value)
+                $number .= $value . "<br>";
+            $table = "<table>";
             $table .= "<tr>";
-                $table .= "<th>Наименование</th>";
-                $table .= "<th>Количество</th>";
-                $table .= "<th>Дата продажи</th>";
-                $table .= "<th>E-mail</th>";
-                $table .= "</tr>";
+            $table .= "<th>Наименование</th>";
+            $table .= "<th>Количество</th>";
+            $table .= "<th>Дата продажи</th>";
+            $table .= "<th>E-mail</th>";
+            $table .= "</tr>";
             $table .= "<tr>";
-                $table .= "<td>".$shoes."</td>";
-                $table .= "<td>".$number."</td>";
-                $table .= "<td>".$_GET['date2']."</td>";
-                $table .= "<td>".$_GET['email2']."</td>";
-                $table .= "</tr>";
+            $table .= "<td>" . $shoes . "</td>";
+            $table .= "<td>" . $number . "</td>";
+            $table .= "<td>" . $_GET['date2'] . "</td>";
+            $table .= "<td>" . $_GET['email2'] . "</td>";
+            $table .= "</tr>";
             $table .= "</table>";
-        echo $table;
+            echo $table;
+        }
         ?>
 
     </main>

@@ -118,21 +118,23 @@
         </div>
 
         <?php
-        $table = "<table>";
+        if (!empty($_GET)) {
+            $table = "<table>";
             $table .= "<tr>";
-                $table .= "<th>Наименование</th>";
-                $table .= "<th>Количество</th>";
-                $table .= "<th>Дата поступления</th>";
-                $table .= "<th>Номер телефона</th>";
-                $table .= "</tr>";
+            $table .= "<th>Наименование</th>";
+            $table .= "<th>Количество</th>";
+            $table .= "<th>Дата поступления</th>";
+            $table .= "<th>Номер телефона</th>";
+            $table .= "</tr>";
             $table .= "<tr>";
-                $table .= "<td>".$_GET['name2']."</td>";
-                $table .= "<td>".$_GET['number2']."</td>";
-                $table .= "<td>".$_GET['date2']."</td>";
-                $table .= "<td>".$_GET['tel2']."</td>";
-                $table .= "</tr>";
+            $table .= "<td>" . $_GET['name2'] . "</td>";
+            $table .= "<td>" . $_GET['number2'] . "</td>";
+            $table .= "<td>" . $_GET['date2'] . "</td>";
+            $table .= "<td>" . $_GET['tel2'] . "</td>";
+            $table .= "</tr>";
             $table .= "</table>";
-        echo $table;
+            echo $table;
+        }
         ?>
 
     </main>
