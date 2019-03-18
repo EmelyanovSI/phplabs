@@ -3,3 +3,4 @@
 Тапочки;Gucci;http://bukinshoes.ru;;5000;
 Кросы;Adidas;http://bukinshoes.ru;2019-03-20;2600;
 Кросы;Puma;http://bukinshoes.ru;2019-03-21;100;
+Туфли;Nike;http://bukinshoes.ru;;1000;

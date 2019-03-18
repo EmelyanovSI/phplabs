@@ -185,15 +185,8 @@
 
             function cmp3($a, $b) {
                 $x = $_GET['name3'];
-                if ($x!=0) {
-                    if ($a[$x] == $b[$x]) return 0;
-                    return $a[$x] > $b[$x] ? 1 : -1;
-                }
-                else {
-                    date_default_timezone_set("UTC");
-                    if ($a[0] == $b[0]) return 0;
-                    return strtotime($a[0]) > strtotime($b[0]) ? 1 : -1;
-                }
+                if ($a[$x] == $b[$x]) return 0;
+                return $a[$x] > $b[$x] ? 1 : -1;
             }
 
             $i = 0;

@@ -146,20 +146,20 @@
         }
 
         if (isset($_GET['form2Btn'])) {
-            $ownersFile = fopen("receipt.txt", 'r') or die($notOpen2);
+            $form2File = fopen("receipt.txt", 'r') or die($notOpen2);
 
 
             $x = $_GET['name2'];
 
             $i = 0;
-            while (!feof($ownersFile)) {
-                $str = htmlentities(fgets($ownersFile));
+            while (!feof($form2File)) {
+                $str = htmlentities(fgets($form2File));
                 if (!empty($str)) {
                     $temp=explode(";", $str);
                     if($temp[$x]==$_GET['search2']) $mas[$i++] = $temp;
                 }
             }
-            fclose($ownersFile);
+            fclose($form2File);
 
             $table = "<table>";
             $table .= "<caption>ПОСТУПЛЕНИЕ</caption>";
@@ -187,17 +187,17 @@
         }
 
         if (isset($_GET['form3Btn'])) {
-            $valueccidFile = fopen("sale.txt", 'r') or die($notOpen3);
+            $form3File = fopen("sale.txt", 'r') or die($notOpen3);
             $x = $_GET['name3'];
             $i = 0;
-            while (!feof($valueccidFile)) {
-                $str = htmlentities(fgets($valueccidFile));
+            while (!feof($form3File)) {
+                $str = htmlentities(fgets($form3File));
                 if (!empty($str)) {
                     $temp=explode(";", $str);
                     if($temp[$x]==$_GET['search3']) $mas[$i++] = $temp;
                 }
             }
-            fclose($valueccidFile);
+            fclose($form3File);
 
             $table = "<table>";
             $table .= "<caption>ПРОДАЖА</caption>";
