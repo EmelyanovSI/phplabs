@@ -1,0 +1,5 @@
+Туфли, Кроссовки, Тапки, Ботинки, Кроксы, Шлепки;1;2019-03-17;emelyanov@gmail.com;
+Кроксы;4;2019-03-18;emelyanov@gmail.com;
+Кроссовки, Шлепки;2;2019-03-19;emelyanov@gmail.com;
+Туфли;1;2019-03-20;emelyanov@gmail.com;
+Тапки;1;2019-03-21;emelyanov@gmail.com;
