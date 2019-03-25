@@ -1,0 +1,4 @@
+p + input[type="submit"] { background: #ffddcc; border-color: #fc505c; }
+p + input[type="submit"]:hover { border-color: #ff0000; background: #fc505c; color: white; }
+
+.added { border: 3px solid #fc505c; background: #ffddcc; }

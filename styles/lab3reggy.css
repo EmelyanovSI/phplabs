@@ -1,0 +1,7 @@
+p + input[type="submit"] { background: #ffc8a1; border-color: #ff8e0d; }
+p + input[type="submit"]:hover { border-color: #ff6800; background: #ff8e0d; color: white; }
+
+.added:nth-child(1) { border: 3px solid #fc505c; background: #ffddcc; }
+.added:nth-child(2) { border: 3px solid #ff8e0d; background: #ffc8a1; }
+.added:nth-child(3) { border: 3px solid #50fc5c; background: #ddffcc; }
+.added:nth-child(4) { border: 3px solid #ff6800; color: #50fc5c; background: #ffc8a1; }

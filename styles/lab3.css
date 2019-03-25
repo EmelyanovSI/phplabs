@@ -1,0 +1,33 @@
+.subNav p.mainP {
+    border-bottom: 2px solid #50bc5c;
+    font-weight: bold;
+    margin: 0;
+    transition: 0.4s;
+}
+.subNav p.mainP a {
+    color: #50bc5c;
+}
+.subNav p.mainP:hover {
+    border-bottom: 2px solid #50fc5c;
+}
+.subNav p.mainP:hover a {
+    color: #50fc5c;
+}
+.subNav p.mainP a:active {
+    color: #2f3640;
+}
+
+p + input[type="submit"] {
+    background: #ddffcc;
+    border-color: #50fc5c;
+    color: #2f3640;
+}
+p + input[type="submit"]:hover {
+    border-color: #00ff00;
+    background: #50fc5c;
+    color: white;
+}
+
+fieldset input {
+    height: 20px; /* i do not know why.. */
+}
