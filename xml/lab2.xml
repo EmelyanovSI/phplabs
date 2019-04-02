@@ -1,0 +1,788 @@
+<?xml-stylesheet href="../styles/xml.css" type="text/css"?>
+
+<shoeShop company="bukin.com">
+
+    <date>02.04.2019</date>
+
+    <brand>
+
+        <season name="summer">
+            <gender sex="male">
+                <model name="shoes">
+                    <type id="1">
+                        <modelName>Some model one</modelName>
+                        <image>img1.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="2">
+                        <modelName>Some model two</modelName>
+                        <image>img2.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="3">
+                        <modelName>Some model three</modelName>
+                        <image>img3.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sandals">
+                    <type id="4">
+                        <modelName>Some model one</modelName>
+                        <image>img4.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="5">
+                        <modelName>Some model two</modelName>
+                        <image>img5.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="6">
+                        <modelName>Some model three</modelName>
+                        <image>img6.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sneakers">
+                    <type id="7">
+                        <modelName>Some model one</modelName>
+                        <image>img7.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="8">
+                        <modelName>Some model two</modelName>
+                        <image>img8.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="9">
+                        <modelName>Some model three</modelName>
+                        <image>img9.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+            </gender>
+            <gender sex="female">
+                <model name="shoes">
+                    <type id="10">
+                        <modelName>Some model one</modelName>
+                        <image>img1.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="11">
+                        <modelName>Some model two</modelName>
+                        <image>img2.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="12">
+                        <modelName>Some model three</modelName>
+                        <image>img3.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sandals">
+                    <type id="13">
+                        <modelName>Some model one</modelName>
+                        <image>img4.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="14">
+                        <modelName>Some model two</modelName>
+                        <image>img5.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="6">
+                        <modelName>Some model three</modelName>
+                        <image>img6.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sneakers">
+                    <type id="15">
+                        <modelName>Some model one</modelName>
+                        <image>img7.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="16">
+                        <modelName>Some model two</modelName>
+                        <image>img8.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="17">
+                        <modelName>Some model three</modelName>
+                        <image>img9.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+            </gender>
+        </season>
+
+        <season name="winter">
+            <gender sex="male">
+                <model name="shoes">
+                    <type id="18">
+                        <modelName>Some model one</modelName>
+                        <image>img1.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="19">
+                        <modelName>Some model two</modelName>
+                        <image>img2.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="20">
+                        <modelName>Some model three</modelName>
+                        <image>img3.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sandals">
+                    <type id="21">
+                        <modelName>Some model one</modelName>
+                        <image>img4.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="22">
+                        <modelName>Some model two</modelName>
+                        <image>img5.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="23">
+                        <modelName>Some model three</modelName>
+                        <image>img6.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sneakers">
+                    <type id="24">
+                        <modelName>Some model one</modelName>
+                        <image>img7.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="25">
+                        <modelName>Some model two</modelName>
+                        <image>img8.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="26">
+                        <modelName>Some model three</modelName>
+                        <image>img9.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+            </gender>
+            <gender sex="female">
+                <model name="shoes">
+                    <type id="27">
+                        <modelName>Some model one</modelName>
+                        <image>img1.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="28">
+                        <modelName>Some model two</modelName>
+                        <image>img2.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="29">
+                        <modelName>Some model three</modelName>
+                        <image>img3.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sandals">
+                    <type id="30">
+                        <modelName>Some model one</modelName>
+                        <image>img4.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="31">
+                        <modelName>Some model two</modelName>
+                        <image>img5.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="32">
+                        <modelName>Some model three</modelName>
+                        <image>img6.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sneakers">
+                    <type id="33">
+                        <modelName>Some model one</modelName>
+                        <image>img7.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="34">
+                        <modelName>Some model two</modelName>
+                        <image>img8.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="35">
+                        <modelName>Some model three</modelName>
+                        <image>img9.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+            </gender>
+        </season>
+
+        <season name="demi-season">
+            <gender sex="male">
+                <model name="shoes">
+                    <type id="36">
+                        <modelName>Some model one</modelName>
+                        <image>img1.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="37">
+                        <modelName>Some model two</modelName>
+                        <image>img2.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="38">
+                        <modelName>Some model three</modelName>
+                        <image>img3.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sandals">
+                    <type id="39">
+                        <modelName>Some model one</modelName>
+                        <image>img4.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="40">
+                        <modelName>Some model two</modelName>
+                        <image>img5.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="41">
+                        <modelName>Some model three</modelName>
+                        <image>img6.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sneakers">
+                    <type id="42">
+                        <modelName>Some model one</modelName>
+                        <image>img7.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="43">
+                        <modelName>Some model two</modelName>
+                        <image>img8.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="44">
+                        <modelName>Some model three</modelName>
+                        <image>img9.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+            </gender>
+            <gender sex="female">
+                <model name="shoes">
+                    <type id="45">
+                        <modelName>Some model one</modelName>
+                        <image>img1.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="46">
+                        <modelName>Some model two</modelName>
+                        <image>img2.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="47">
+                        <modelName>Some model three</modelName>
+                        <image>img3.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sandals">
+                    <type id="48">
+                        <modelName>Some model one</modelName>
+                        <image>img4.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="49">
+                        <modelName>Some model two</modelName>
+                        <image>img5.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="50">
+                        <modelName>Some model three</modelName>
+                        <image>img6.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+
+                <model name="sneakers">
+                    <type id="51">
+                        <modelName>Some model one</modelName>
+                        <image>img7.jpg</image>
+                        <weight>10</weight>
+                        <size>
+                            <height>12</height>
+                            <width>10</width>
+                            <top>5</top>
+                        </size>
+                        <price>50</price>
+                        <color>black</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="52">
+                        <modelName>Some model two</modelName>
+                        <image>img8.jpg</image>
+                        <weight>16</weight>
+                        <size>
+                            <height>24</height>
+                            <width>16</width>
+                            <top>8</top>
+                        </size>
+                        <price>60</price>
+                        <color>blue</color>
+                        <description>For going everywhere</description>
+                    </type>
+                    <type id="53">
+                        <modelName>Some model three</modelName>
+                        <image>img9.jpg</image>
+                        <weight>24</weight>
+                        <size>
+                            <height>32</height>
+                            <width>20</width>
+                            <top>12</top>
+                        </size>
+                        <price>80</price>
+                        <color>white</color>
+                        <description>For going everywhere</description>
+                    </type>
+                </model>
+            </gender>
+        </season>
+
+    </brand>
+
+    <brand>
+
+    </brand>
+
+    <end>THE END</end>
+
+</shoeShop>

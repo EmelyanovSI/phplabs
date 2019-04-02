@@ -1,0 +1,87 @@
+shoeShop {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.4s;
+}
+
+date {
+    margin: 10px;
+    padding: 20px;
+    background: #50fc5c;
+    border: 2px solid #2f3640;
+    border-radius: 100px;
+    font-size: x-large;
+    box-shadow: 0 0 4px 2px #ccc;
+    transition: inherit;
+}
+date:hover {
+    font-size: xx-large;
+}
+
+brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: inherit;
+}
+
+season {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 2px solid #2f3640;
+    padding: 10px;
+    transition: inherit;
+}
+season:hover {
+    box-shadow: 0 3px 9px 9px #ccc;
+    font-size: large;
+}
+
+gender {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+gender:first-child {
+    border-right: 2px solid #2f3640;
+}
+
+model {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+type > * {
+    padding: 0 5px;
+}
+
+end {
+    margin: 10px;
+    padding: 20px;
+    background: #50fc5c;
+    border: 2px solid #2f3640;
+    border-radius: 100px;
+    font-size: x-large;
+    box-shadow: 0 0 4px 2px #ccc;
+    transition: inherit;
+}
+end:hover {
+    font-size: xx-large;
+}
+
+image {
+    color: #fc505c;
+}
+
+color {
+    color: #50fc5c;
+}
+
+size {
+    color: mediumslateblue;
+}

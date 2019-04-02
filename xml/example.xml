@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<printers company="My company">
+    <date>12.09.2006</date>
+    <typeprint technology="Laser">
+        <page size="A4">
+            <tm name="Canon">
+                <model id="132">
+                    <modelname>LBP810</modelname>
+                    <image>LBP1120.jpg</image>
+                    <weight>10</weight>
+                    <size>
+                        <height>10</height>
+                        <width>125</width>
+                        <top>50</top>
+                    </size>
+                    <price>47.4</price>
+                    <cartrige>EP-22</cartrige>
+                    <description>For home or small office use</description>
+                </model>
+            </tm>
+            <tm name="HP">
+                <model id="26">
+                    <modelname>LaserJet 1010</modelname>
+                    <price>47.4</price>
+                    <cartrige>EP-22</cartrige>
+                </model>
+            </tm>
+        </page>
+    </typeprint>
+</printers>
