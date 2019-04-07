@@ -1,0 +1,63 @@
+img {
+    height: 300px;
+    width: 300px;
+}
+
+table {
+    border-radius: 5px;
+}
+
+.shoeShop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shoeShop p {
+    margin: 3px;
+    padding: 3px;
+}
+
+.shoeShop > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #2f3640;
+    border-radius: 5px;
+    margin: 5px;
+}
+.shoeShop > div > div:nth-child(1) {
+    border-bottom: 2px solid #2f3640;
+}
+.shoeShop > div > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+}
+
+.shoeTitle {
+    font-size: x-large;
+}
+
+.price {
+    font-size: large;
+    color: #50fc5c;
+}
+
+.addToRecycleBin {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #2f3640;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+.addToRecycleBin:hover {
+    background: #2f3640;
+}
+.addToRecycleBin a {
+    color: #2f3640;
+}
+.addToRecycleBin:hover a {
+    color: white;
+}
