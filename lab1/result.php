@@ -1,9 +1,9 @@
-<DOCTYPE HTML>
+<!DOCTYPE HTML>
 
     <html lang="en">
 
     <head>
-        <title>lab1</title>
+        <title>phpLab1</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/style.css">

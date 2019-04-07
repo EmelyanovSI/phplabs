@@ -3,7 +3,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>lab3</title>
+                <title>xmlab3</title>
                 <meta charset="UTF-8"/>
                 <link rel="stylesheet" href="lab3.css"/>
             </head>

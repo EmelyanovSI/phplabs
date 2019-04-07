@@ -28,7 +28,7 @@ if (isset ($_SESSION['form1']))
 <html lang="en">
 
 <head>
-    <title>lab4</title>
+    <title>phpLab4</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/style.css">

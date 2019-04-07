@@ -105,7 +105,7 @@ if (isset($_COOKIE['theme'])) {
     <html lang="en">
 
     <head>
-        <title>lab3</title>
+        <title>phpLab3</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/style.css">
