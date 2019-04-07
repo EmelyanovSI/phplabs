@@ -1,4 +1,4 @@
-shoeShop {
+.shoeShop {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@ shoeShop {
     transition: 0.4s;
 }
 
-date {
+.date {
     margin: 10px;
     padding: 20px;
     background: #50fc5c;
@@ -16,18 +16,18 @@ date {
     box-shadow: 0 0 4px 2px #ccc;
     transition: inherit;
 }
-date:hover {
+.date:hover {
     font-size: xx-large;
 }
 
-brand {
+.brand {
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: inherit;
 }
 
-season {
+.season {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,32 +35,35 @@ season {
     padding: 10px;
     transition: inherit;
 }
-season:hover {
+.season:hover {
     box-shadow: 0 3px 9px 9px #ccc;
-    font-size: large;
+}
+.season:hover > .gender {
+    font-size: 1.05em;
 }
 
-gender {
+.gender {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 10px;
+    transition: inherit;
 }
-gender:first-child {
+.gender:first-child {
     border-right: 2px solid #2f3640;
 }
 
-model {
+.model {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-type > * {
+.type > * {
     padding: 0 5px;
 }
 
-end {
+.end {
     margin: 10px;
     padding: 20px;
     background: #50fc5c;
@@ -70,28 +73,24 @@ end {
     box-shadow: 0 0 4px 2px #ccc;
     transition: inherit;
 }
-end:hover {
+.end:hover {
     font-size: xx-large;
 }
 
-image {
+.image {
     color: #fc505c;
 }
 
-color {
+.color {
     color: #50fc5c;
 }
 
-size {
+.size {
     color: mediumslateblue;
 }
 
-season[name="demi-season"] {
-    background: #ffffb0;
-}
-gender[sex="male"] > model > type > modelName {
-    color: dodgerblue;
-}
-gender[sex="female"] > model > type > modelName {
-    color: deeppink;
+th {
+    padding: 0 10px;
+    border: 2px solid #2f3640;
+    border-radius: 10px;
 }

@@ -1,54 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="lab2.css" type="text/css"?>
-<?xml-stylesheet href="#style" type="text/css"?>
+<?xml-stylesheet type="text/xsl" href="lab3.xsl"?>
 
 <shoeShop company="bukin.com">
 
-    <style id="style">
-        season[name="no"] { background: #ffffe0; }
-        gender[sex="emale"] > model > type > modelName { color: #ff0000; }
-    </style>
-
-    <date>02.04.2019</date>
+    <date>07.04.2019</date>
 
     <brand>
-
-        <season name="no">
-            <gender sex="emale">
-                <model name="sho">
-                    <type id="1">
-                        <modelName>Some model one</modelName>
-                        <image>img1.jpg</image>
-                        <weight>10</weight>
-                        <size>
-                            <height>12</height>
-                            <width>10</width>
-                            <top>5</top>
-                        </size>
-                        <price>50</price>
-                        <color>black</color>
-                        <description>For going everywhere</description>
-                    </type>
-                </model>
-            </gender>
-            <gender sex="emale">
-                <model name="sho">
-                    <type id="1">
-                        <modelName>Some model one</modelName>
-                        <image>img1.jpg</image>
-                        <weight>10</weight>
-                        <size>
-                            <height>12</height>
-                            <width>10</width>
-                            <top>5</top>
-                        </size>
-                        <price>50</price>
-                        <color>black</color>
-                        <description>For going everywhere</description>
-                    </type>
-                </model>
-            </gender>
-        </season>
 
         <season name="summer">
             <gender sex="male">
