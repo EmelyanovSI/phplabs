@@ -46,9 +46,15 @@ a {
 
 .title {
     margin: 0 5%;
+    /*margin: 0;*/
+    /*margin-left: 5%;*/
     display: flex;
     flex-direction: row;
     color: #cccccc;
+    transition: 0.4s;
+}
+.title:hover {
+    color: #2f3640;
 }
 .title:active {
     color: #50bc5c;
@@ -313,3 +319,9 @@ footer a:active {
     background: white;
 }
 /***************************/
+
+@media screen and (max-width: 1080px) {
+    /*.FIO {
+        font-size: 2em;
+    }*/
+}

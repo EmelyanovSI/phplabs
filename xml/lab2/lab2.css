@@ -85,3 +85,13 @@ color {
 size {
     color: mediumslateblue;
 }
+
+season[name="demi-season"] {
+    background: #ffffb0;
+}
+gender[sex="male"] > model > type > modelName {
+    color: dodgerblue;
+}
+gender[sex="female"] > model > type > modelName {
+    color: deeppink;
+}
