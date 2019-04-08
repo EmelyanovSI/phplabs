@@ -47,7 +47,7 @@ fieldset span{
     text-align: center;
 }
 fieldset input[type="checkbox"],
-fieldset input[type="radio"]{
+fieldset input[type="radio"] {
     height: inherit;
     width: inherit;
 }

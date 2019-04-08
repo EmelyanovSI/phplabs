@@ -1,22 +1,4 @@
-<?php
-session_start();
-if (!empty($_GET)) {
-    $_SESSION['form1']['name1'] = $_GET['name1'];
-    $_SESSION['form1']['site1'] = $_GET['site1'];
-    $_SESSION['form1']['date1'] = $_GET['date1'];
-    $_SESSION['form1']['price1'] = $_GET['price1'];
-}
-$name1 = '';
-$site1 = '';
-$date1 = '';
-$price1 = '';
-if (isset($_SESSION['form1'])) {
-    $name1 = $_SESSION['form1']['name1'];
-    $site1 = $_SESSION['form1']['site1'];
-    $date1 = $_SESSION['form1']['date1'];
-    $price1 = $_SESSION['form1']['price1'];
-}
-?>
+
 
 <!DOCTYPE HTML>
 
@@ -80,35 +62,40 @@ if (isset($_SESSION['form1'])) {
     <div class="forms">
         <form name="form1">
             <fieldset>
-                <legend>АССОРТИМЕНТ</legend>
+                <legend>ПОСТУПЛЕНИЕ</legend>
 
                 <label for="name1">Наименование</label>
-                <input id="name1" name="name1" type="text" placeholder="Туфли" value="<?php echo $name1; ?>" required>
+                <select id="name1" name="name1">
+                    <option <?php if ($name1 == 'Туфли') echo 'selected'; ?>>Туфли</option>
+                    <option <?php if ($name1 == 'Кроссовки') echo 'selected'; ?>>Кроссовки</option>
+                    <option <?php if ($name1 == 'Тапки') echo 'selected'; ?>>Тапки</option>
+                    <option <?php if ($name1 == 'Ботинки') echo 'selected'; ?>>Ботинки</option>
+                    <option <?php if ($name1 == 'Кроксы') echo 'selected'; ?>>Кроксы</option>
+                    <option <?php if ($name1 == 'Шлепки') echo 'selected'; ?>>Шлепки</option>
+                </select>
 
-                <label for="site1">Сайт</label>
-                <input id="site1" name="site1" type="url"
-                       placeholder="http://bukinshoes.ru" value="<?php echo $site1; ?>">
+                <label for="number1">Количество</label>
+                <input id="number1" name="number1" type="number" min="1" max="100" value="<?php echo $number1;?>">
 
-                <label for="date1">Дата выпуска</label>
+                <label for="date1">Дата поступления</label>
                 <input id="date1" name="date1" type="date" placeholder="2000-03-29" value="<?php echo $date1; ?>"
                        min="1970-01-01" max="2070-01-01">
 
-                <label for="price1">Цена</label>
-                <input id="price1" name="price1" type="range" min="100" max="5000" step="100"
-                       value="<?php echo $price1; ?>">
-                <span id="showPrice1">1000</span>
+                <label for="tel1">Номер телефона</label>
+                <input id="tel1" name="tel1" type="tel" placeholder="+999-(99)-999-99-99"
+                       pattern="^((80|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
 
-                <input id="form1request" name="form1request" type="hidden" value="form1request">
+                <input id="form2request" name="form2request" type="hidden" value="form2request">
 
             </fieldset>
-            <input type="submit" value="Сохранить">
+            <input type="submit" value="Отправить">
             <input type="reset" value="Очистить">
         </form>
     </div>
 
     <div class="npBtn">
-        <a href="#">Preview</a>
-        <a href="form2.php">Next</a>
+        <a href="form1.php">Preview</a>
+        <a href="form3.php">Next</a>
     </div>
 
 </main>

@@ -1,22 +1,4 @@
-<?php
-session_start();
-if (!empty($_GET)) {
-    $_SESSION['form1']['name1'] = $_GET['name1'];
-    $_SESSION['form1']['site1'] = $_GET['site1'];
-    $_SESSION['form1']['date1'] = $_GET['date1'];
-    $_SESSION['form1']['price1'] = $_GET['price1'];
-}
-$name1 = '';
-$site1 = '';
-$date1 = '';
-$price1 = '';
-if (isset($_SESSION['form1'])) {
-    $name1 = $_SESSION['form1']['name1'];
-    $site1 = $_SESSION['form1']['site1'];
-    $date1 = $_SESSION['form1']['date1'];
-    $price1 = $_SESSION['form1']['price1'];
-}
-?>
+
 
 <!DOCTYPE HTML>
 
@@ -80,35 +62,47 @@ if (isset($_SESSION['form1'])) {
     <div class="forms">
         <form name="form1">
             <fieldset>
-                <legend>АССОРТИМЕНТ</legend>
+                <legend>ПРОДАЖА</legend>
 
                 <label for="name1">Наименование</label>
-                <input id="name1" name="name1" type="text" placeholder="Туфли" value="<?php echo $name1; ?>" required>
+                <div id="name1">
+                    <input type="checkbox" name="shoes['Туфли']" value="Туфли" title="Туфли">
+                    <input type="checkbox" name="shoes['Кроссовки']" value="Кроссовки" title="Кроссовки">
+                    <input type="checkbox" name="shoes['Тапки']" value="Тапки" title="Тапки">
+                    <input type="checkbox" name="shoes['Ботинки']" value="Ботинки" title="Ботинки">
+                    <input type="checkbox" name="shoes['Кроксы']" value="Кроксы" title="Кроксы" checked>
+                    <input type="checkbox" name="shoes['Шлепки']" value="Шлепки" title="Шлепки">
+                </div>
 
-                <label for="site1">Сайт</label>
-                <input id="site1" name="site1" type="url"
-                       placeholder="http://bukinshoes.ru" value="<?php echo $site1; ?>">
+                <label for="number1">Количество</label>
+                <div id="number1">
+                    <input type="radio" name="number[]" value="1" title="1" checked>
+                    <input type="radio" name="number[]" value="2" title="2">
+                    <input type="radio" name="number[]" value="3" title="3">
+                    <input type="radio" name="number[]" value="4" title="4">
+                    <input type="radio" name="number[]" value="5" title="5">
+                    <input type="radio" name="number[]" value="6" title="6">
+                </div>
 
-                <label for="date1">Дата выпуска</label>
-                <input id="date1" name="date1" type="date" placeholder="2000-03-29" value="<?php echo $date1; ?>"
+                <label for="date1">Дата продажи</label>
+                <input id="date1" name="date1" type="date" placeholder="2000-03-29"
                        min="1970-01-01" max="2070-01-01">
 
-                <label for="price1">Цена</label>
-                <input id="price1" name="price1" type="range" min="100" max="5000" step="100"
-                       value="<?php echo $price1; ?>">
-                <span id="showPrice1">1000</span>
+                <label for="email1">E-mail</label>
+                <input id="email1" name="email1" type="email"
+                       value="emelyanov@gmail.com" placeholder="emelyanov@gmail.com">
 
-                <input id="form1request" name="form1request" type="hidden" value="form1request">
+                <input id="form3request" name="form3request" type="hidden" value="form3request">
 
             </fieldset>
-            <input type="submit" value="Сохранить">
+            <input type="submit" value="Отправить">
             <input type="reset" value="Очистить">
         </form>
     </div>
 
     <div class="npBtn">
-        <a href="#">Preview</a>
-        <a href="form2.php">Next</a>
+        <a href="form1.php">Preview</a>
+        <a href="form3.php">Next</a>
     </div>
 
 </main>
