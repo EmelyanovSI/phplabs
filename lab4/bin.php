@@ -37,10 +37,10 @@
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li class="active"><a href="shop.php">Sessions</a></li>
-            <li><a href="#">Regulars</a></li>
-            <li><a href="#">Authorization</a></li>
-            <li><a href="#">Database</a></li>
-            <li><a href="#">Registration and database</a></li>
+            <li><a href="../lab5/">Regulars</a></li>
+            <li><a href="../lab6/">Authorization</a></li>
+            <li><a href="../lab7/">Database</a></li>
+            <li><a href="../lab8/">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -62,7 +62,7 @@
     <?php
     if (isset($_SESSION['cart'])) {
         $table = "<table>";
-        $table .="<tr>
+        $table .= "<tr>
 			        <th>Название товара</th>
 			        <th>Цена</th>
 			        <th>Количество</th>
@@ -102,6 +102,8 @@
 </footer>
 
 <script src="../scripts/main.js" type="text/javascript" language="JavaScript"></script>
+<script src="../scripts/jquery-3.4.0.js" type="text/javascript" language="JavaScript"></script>
+<script src="../scripts/navigation.js" type="text/javascript" language="JavaScript"></script>
 
 </body>
 

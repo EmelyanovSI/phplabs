@@ -325,3 +325,13 @@ footer a:active {
         font-size: 2em;
     }*/
 }
+
+/***************navigation***************/
+/*header,*/
+.subNav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+/****************************************/
+

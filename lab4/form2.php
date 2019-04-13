@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML>
 
 <html lang="en">
@@ -37,10 +35,10 @@
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li class="active"><a href="shop.php">Sessions</a></li>
-            <li><a href="#">Regulars</a></li>
-            <li><a href="#">Authorization</a></li>
-            <li><a href="#">Database</a></li>
-            <li><a href="#">Registration and database</a></li>
+            <li><a href="../lab5/">Regulars</a></li>
+            <li><a href="../lab6/">Authorization</a></li>
+            <li><a href="../lab7/">Database</a></li>
+            <li><a href="../lab8/">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -75,7 +73,7 @@
                 </select>
 
                 <label for="number1">Количество</label>
-                <input id="number1" name="number1" type="number" min="1" max="100" value="<?php echo $number1;?>">
+                <input id="number1" name="number1" type="number" min="1" max="100" value="<?php echo $number1; ?>">
 
                 <label for="date1">Дата поступления</label>
                 <input id="date1" name="date1" type="date" placeholder="2000-03-29" value="<?php echo $date1; ?>"
@@ -115,6 +113,8 @@
 </footer>
 
 <script src="../scripts/main.js" type="text/javascript" language="JavaScript"></script>
+<script src="../scripts/jquery-3.4.0.js" type="text/javascript" language="JavaScript"></script>
+<script src="../scripts/navigation.js" type="text/javascript" language="JavaScript"></script>
 <script>
     showPrice();
 </script>
