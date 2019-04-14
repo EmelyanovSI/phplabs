@@ -73,7 +73,6 @@ table {
     background: #2f3640;
     transition: 0.4s;
 }
-
 .npBtn > a[href],
 .npBtn > a {
     outline: none;
@@ -94,11 +93,17 @@ table {
     color: #999999;
     border-color: #999999;
 }
-
 .npBtn > a:hover {
     background: #2f3640;
 }
 .npBtn > a[href]:hover {
     background: white;
     color: #2f3640;
+}
+
+td a {
+    color: white;
+}
+td a:hover {
+    color: #50fc5c;
 }

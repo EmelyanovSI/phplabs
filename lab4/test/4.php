@@ -76,10 +76,10 @@ if (isset($_SESSION['test']['fourth']))
                     Выберите один ответ:
                 </label>
                 <div>
-                    <input name="fourth" type="radio" value="да" title="да"
-                        <?php if ($fourth == 'да') echo 'checked'; ?>>
-                    <input name="fourth" type="radio" value="нет" title="нет"
-                        <?php if ($fourth == 'нет') echo 'checked'; ?>>
+                    <input name="fourth" type="radio" value="1" title="да"
+                        <?php if ($fourth == '1') echo 'checked'; ?>>
+                    <input name="fourth" type="radio" value="2" title="нет"
+                        <?php if ($fourth == '2') echo 'checked'; ?>>
                 </div>
 
             </fieldset>
@@ -91,6 +91,7 @@ if (isset($_SESSION['test']['fourth']))
         <a href="3.php">Preview</a>
         <a href="5.php">Next</a>
     </div>
+
 </main>
 
 <!--<aside>

@@ -1,11 +1,4 @@
-<?php
-session_start();
-$third = '';
-if (!empty($_GET))
-    $_SESSION['test']['third'] = $_GET['third'];
-if (isset($_SESSION['test']['third']))
-    $third = $_SESSION['test']['third'];
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE HTML>
 
@@ -66,33 +59,51 @@ if (isset($_SESSION['test']['third']))
 
 <main>
 
-    <div class="forms">
-        <form name="test3">
-            <fieldset>
-                <legend>Вопрос №3</legend>
+    <?php
+    /*$AnswerTitle = array(
+        array('1'),
+        array('три', 'False', 'четыре', 'Возникнет ошибка выполнения'),
+        array('значения выбранных переключателей в группе переключателей',
+            'одностроное поле',
+            'выбранные значения из списка со множественным выбором',
+            'выбранные значения из списка с единственным выбором',
+            'значений выбранной радиокнопки в группе радиокнопок'),
+        array('дa', 'нет'),
+        array('is_object($a)', 'settype($a,”integer”)', 'is_integer($a)', 'is_int($a)'),
+        array('4', 'этот код выдаст ошибку', '6', '5'),
+        array('0'),
+        array('GET', 'POST'),
+        array('0123456789'),
+        array('перехода на следующую итерацию цикла',
+            'завершения работы цикла Верно',
+            'завершения работы программы',
+            'выхода из функции'));*/
 
-                <label for="third">Укажите, какие элементы формы можно передавать через ассоциативные массивы:</label>
-                <div>
-                    <input type="checkbox" name="third[1]" value="1" <?php if (isset($third[1])) echo 'checked'; ?>
-                           title="значения выбранных переключателей в группе переключателей">
-                    <input type="checkbox" name="third[2]" value="2" <?php if (isset($third[2])) echo 'checked'; ?>
-                           title="одностроное поле">
-                    <input type="checkbox" name="third[3]" value="3" <?php if (isset($third[3])) echo 'checked'; ?>
-                           title="выбранные значения из списка со множественным выбором">
-                    <input type="checkbox" name="third[4]" value="4" <?php if (isset($third[4])) echo 'checked'; ?>
-                           title="выбранные значения из списка с единственным выбором">
-                    <input type="checkbox" name="third[5]" value="5" <?php if (isset($third[5])) echo 'checked'; ?>
-                           title="значений выбранной радиокнопки в группе радиокнопок">
-                </div>
+    $arr = array('first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth');
+    $table = "<table>";
+    $table .= "<tr>
+                <th>Вопрос</th>
+			    <th>Ответ</th>
+			    <th>Перейти к вопросу</th>
+			   </tr>";
+    for ($i = 0; $i < 10; $i++) {
+        $table .= "<tr>";
+        $table .= "<td>" . ($i + 1) . "</td>";
+        $Answer = 'Нет ответа';
+        if (isset($_SESSION['test'][$arr[$i]]))
+            $Answer = $_SESSION['test'][$arr[$i]];
+        if (is_array($Answer))
+            $Answer = implode(";", $Answer);
+        $table .= "<td>" . $Answer . "</td>";
+        $table .= "<td class='swing'><a href='" . ($i + 1) . ".php'>" . $arr[$i] . "</a></td>";
+        $table .= "</tr>";
+    }
+    $table .= "</table> ";
+    echo $table;
+    ?>
 
-            </fieldset>
-            <input type="submit" value="Сохранить">
-            <input type="reset" value="Очистить">
-        </form>
-    </div>
     <div class="npBtn">
-        <a href="2.php">Preview</a>
-        <a href="4.php">Next</a>
+        <a href="result.php?new=yes">Завершить просмотр</a>
     </div>
 
 </main>

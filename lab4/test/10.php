@@ -1,10 +1,10 @@
 <?php
 session_start();
-$third = '';
+$tenth = '';
 if (!empty($_GET))
-    $_SESSION['test']['third'] = $_GET['third'];
-if (isset($_SESSION['test']['third']))
-    $third = $_SESSION['test']['third'];
+    $_SESSION['test']['tenth'] = $_GET['tenth'];
+if (isset($_SESSION['test']['tenth']))
+    $tenth = $_SESSION['test']['tenth'];
 ?>
 
 <!DOCTYPE HTML>
@@ -67,22 +67,23 @@ if (isset($_SESSION['test']['third']))
 <main>
 
     <div class="forms">
-        <form name="test3">
+        <form name="test10">
             <fieldset>
-                <legend>Вопрос №3</legend>
+                <legend>Вопрос №10</legend>
 
-                <label for="third">Укажите, какие элементы формы можно передавать через ассоциативные массивы:</label>
+                <label for="tenth">
+                    Оператор break используется для:<br>
+                    Выберите один ответ:
+                </label>
                 <div>
-                    <input type="checkbox" name="third[1]" value="1" <?php if (isset($third[1])) echo 'checked'; ?>
-                           title="значения выбранных переключателей в группе переключателей">
-                    <input type="checkbox" name="third[2]" value="2" <?php if (isset($third[2])) echo 'checked'; ?>
-                           title="одностроное поле">
-                    <input type="checkbox" name="third[3]" value="3" <?php if (isset($third[3])) echo 'checked'; ?>
-                           title="выбранные значения из списка со множественным выбором">
-                    <input type="checkbox" name="third[4]" value="4" <?php if (isset($third[4])) echo 'checked'; ?>
-                           title="выбранные значения из списка с единственным выбором">
-                    <input type="checkbox" name="third[5]" value="5" <?php if (isset($third[5])) echo 'checked'; ?>
-                           title="значений выбранной радиокнопки в группе радиокнопок">
+                    <input name="tenth" type="radio" value="1" title="перехода на следующую итерацию цикла"
+                        <?php if ($tenth == '1') echo 'checked'; ?>>
+                    <input name="tenth" type="radio" value="2" title="завершения работы цикла"
+                        <?php if ($tenth == '2') echo 'checked'; ?>>
+                    <input name="tenth" type="radio" value="3" title="завершения работы программы"
+                        <?php if ($tenth == '3') echo 'checked'; ?>>
+                    <input name="tenth" type="radio" value="4" title="выхода из функции"
+                        <?php if ($tenth == '4') echo 'checked'; ?>>
                 </div>
 
             </fieldset>
@@ -91,8 +92,11 @@ if (isset($_SESSION['test']['third']))
         </form>
     </div>
     <div class="npBtn">
-        <a href="2.php">Preview</a>
-        <a href="4.php">Next</a>
+        <a href="9.php">Preview</a>
+        <a>Next</a>
+    </div>
+    <div class="npBtn">
+        <a href="all.php">Завершить тест</a>
     </div>
 
 </main>

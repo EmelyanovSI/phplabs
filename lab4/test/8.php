@@ -1,10 +1,10 @@
 <?php
 session_start();
-$third = '';
+$eighth = '';
 if (!empty($_GET))
-    $_SESSION['test']['third'] = $_GET['third'];
-if (isset($_SESSION['test']['third']))
-    $third = $_SESSION['test']['third'];
+    $_SESSION['test']['eighth'] = $_GET['eighth'];
+if (isset($_SESSION['test']['eighth']))
+    $eighth = $_SESSION['test']['eighth'];
 ?>
 
 <!DOCTYPE HTML>
@@ -67,22 +67,19 @@ if (isset($_SESSION['test']['third']))
 <main>
 
     <div class="forms">
-        <form name="test3">
+        <form name="test8">
             <fieldset>
-                <legend>Вопрос №3</legend>
+                <legend>Вопрос №8</legend>
 
-                <label for="third">Укажите, какие элементы формы можно передавать через ассоциативные массивы:</label>
+                <label for="eighth">
+                    При каком методе передачи данных запрос оставляет URL без изменений?<br>
+                    Выберите один ответ:
+                </label>
                 <div>
-                    <input type="checkbox" name="third[1]" value="1" <?php if (isset($third[1])) echo 'checked'; ?>
-                           title="значения выбранных переключателей в группе переключателей">
-                    <input type="checkbox" name="third[2]" value="2" <?php if (isset($third[2])) echo 'checked'; ?>
-                           title="одностроное поле">
-                    <input type="checkbox" name="third[3]" value="3" <?php if (isset($third[3])) echo 'checked'; ?>
-                           title="выбранные значения из списка со множественным выбором">
-                    <input type="checkbox" name="third[4]" value="4" <?php if (isset($third[4])) echo 'checked'; ?>
-                           title="выбранные значения из списка с единственным выбором">
-                    <input type="checkbox" name="third[5]" value="5" <?php if (isset($third[5])) echo 'checked'; ?>
-                           title="значений выбранной радиокнопки в группе радиокнопок">
+                    <input name="eighth" type="radio" value="1" title="GET"
+                        <?php if ($eighth == '1') echo 'checked'; ?>>
+                    <input name="eighth" type="radio" value="2" title="POST"
+                        <?php if ($eighth == '2') echo 'checked'; ?>>
                 </div>
 
             </fieldset>
@@ -91,8 +88,8 @@ if (isset($_SESSION['test']['third']))
         </form>
     </div>
     <div class="npBtn">
-        <a href="2.php">Preview</a>
-        <a href="4.php">Next</a>
+        <a href="7.php">Preview</a>
+        <a href="9.php">Next</a>
     </div>
 
 </main>

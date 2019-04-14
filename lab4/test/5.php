@@ -76,13 +76,13 @@ if (isset($_SESSION['test']['fifth']))
                     Выберите один или несколько ответов:
                 </label>
                 <div>
-                    <input type="checkbox" name="fifth[1]" value="1" <?php if (isset($fifth['1'])) echo 'checked'; ?>
+                    <input type="checkbox" name="fifth[1]" value="1" <?php if (isset($fifth[1])) echo 'checked'; ?>
                            title="is_object($a)">
-                    <input type="checkbox" name="fifth[2]" value="2" <?php if (isset($fifth['2'])) echo 'checked'; ?>
+                    <input type="checkbox" name="fifth[2]" value="2" <?php if (isset($fifth[2])) echo 'checked'; ?>
                            title="settype($a,”integer”)">
-                    <input type="checkbox" name="fifth[3]" value="3" <?php if (isset($fifth['3'])) echo 'checked'; ?>
+                    <input type="checkbox" name="fifth[3]" value="3" <?php if (isset($fifth[3])) echo 'checked'; ?>
                            title="is_integer($a)">
-                    <input type="checkbox" name="fifth[4]" value="4" <?php if (isset($fifth['4'])) echo 'checked'; ?>
+                    <input type="checkbox" name="fifth[4]" value="4" <?php if (isset($fifth[4])) echo 'checked'; ?>
                            title="is_int($a)">
                 </div>
 
@@ -95,6 +95,7 @@ if (isset($_SESSION['test']['fifth']))
         <a href="4.php">Preview</a>
         <a href="6.php">Next</a>
     </div>
+
 </main>
 
 <!--<aside>

@@ -90,6 +90,7 @@ if (isset($_SESSION['test']['first']))
         <a>Preview</a>
         <a href="2.php">Next</a>
     </div>
+
 </main>
 
 <!--<aside>

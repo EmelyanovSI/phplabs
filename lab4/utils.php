@@ -85,7 +85,7 @@ if (isset($_GET['Email']))
             }
             $d = date_diff($now, $dd);
             $dif = $d->s + $d->i * 60;
-            echo '<p class="added">Вы зашли на сайт ' . $dif . ' секунд назад.';
+            echo '<p class="added">Вы зашли на сайт ' . $dif . ' секунд(ы) назад.';
         } else echo '<p class="notFind">Вы еще не обновляли страницу!</p>';
     }
     ?>

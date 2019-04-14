@@ -79,15 +79,14 @@ if (isset($_SESSION['test']['second']))
                     Выберите один ответ:
                 </label>
                 <div>
-                    <input name="second" type="radio" value="три" title="три"
-                        <?php if ($second == 'три') echo 'checked'; ?>>
-                    <input name="second" type="radio" value="False" title="False"
-                        <?php if ($second == 'False') echo 'checked'; ?>>
-                    <input name="second" type="radio" value="четыре" title="четыре"
-                        <?php if ($second == 'четыре') echo 'checked'; ?>>
-                    <input name="second"
-                           type="radio" <?php if ($second == 'Возникнет ошибка выполнения') echo 'checked'; ?>
-                           value="Возникнет ошибка выполнения" title="Возникнет ошибка выполнения">
+                    <input name="second" type="radio" value="1" title="три"
+                        <?php if ($second == '1') echo 'checked'; ?>>
+                    <input name="second" type="radio" value="2" title="False"
+                        <?php if ($second == '2') echo 'checked'; ?>>
+                    <input name="second" type="radio" value="3" title="четыре"
+                        <?php if ($second == '3') echo 'checked'; ?>>
+                    <input name="second" type="radio" value="4" title="Возникнет ошибка выполнения"
+                        <?php if ($second == '4') echo 'checked'; ?>>
                 </div>
 
             </fieldset>
@@ -99,6 +98,7 @@ if (isset($_SESSION['test']['second']))
         <a href="1.php">Preview</a>
         <a href="3.php">Next</a>
     </div>
+
 </main>
 
 <!--<aside>

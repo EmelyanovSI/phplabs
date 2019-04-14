@@ -1,11 +1,4 @@
-<?php
-session_start();
-$third = '';
-if (!empty($_GET))
-    $_SESSION['test']['third'] = $_GET['third'];
-if (isset($_SESSION['test']['third']))
-    $third = $_SESSION['test']['third'];
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE HTML>
 
@@ -66,33 +59,77 @@ if (isset($_SESSION['test']['third']))
 
 <main>
 
-    <div class="forms">
-        <form name="test3">
-            <fieldset>
-                <legend>Вопрос №3</legend>
+    <?php
+    $score = -1;
+    if (isset($_GET['new']) && ($_GET['new'] == 'yes')) {
+        $score = 0;
+        if (isset($_SESSION['test'])) {
+            if (isset($_SESSION['test']['first'])) {
+                if ($_SESSION['test']['first'] == 1) ++$score;
+            }
+            if (isset($_SESSION['test']['second'])) {
+                if ($_SESSION['test']['second'] == 1) ++$score;
+            }
+            if (isset($_SESSION['test']['third'])) {
+                if ($_SESSION['test']['third'] == Array(4 => '4', 5 => '5')) ++$score;
+            }
+            if (isset($_SESSION['test']['fourth'])) {
+                if ($_SESSION['test']['fourth'] == 2) ++$score;
+            }
+            if (isset($_SESSION['test']['fifth'])) {
+                if ($_SESSION['test']['fifth'] == Array(4 => '4')) ++$score;
+            }
+            if (isset($_SESSION['test']['sixth'])) {
+                if ($_SESSION['test']['sixth'] == 4) ++$score;
+            }
+            if (isset($_SESSION['test']['seventh'])) {
+                if ($_SESSION['test']['seventh'] == 0) ++$score;
+            }
+            if (isset($_SESSION['test']['eighth'])) {
+                if ($_SESSION['test']['eighth'] == 2) ++$score;
+            }
+            if (isset($_SESSION['test']['ninth'])) {
+                if ($_SESSION['test']['ninth'] == '0123456789') ++$score;
+            }
+            if (isset($_SESSION['test']['tenth'])) {
+                if ($_SESSION['test']['tenth'] == 2) ++$score;
+            }
+            echo '<p class="added">Баллов: ' . $score . '/10</p>';
+            unset ($_SESSION['test']);
+        } else {
+            echo '<p class="notFind">Ошибка подсчета результатов текущего теста!</p>';
+            $score = -1;
+        }
+    }
 
-                <label for="third">Укажите, какие элементы формы можно передавать через ассоциативные массивы:</label>
-                <div>
-                    <input type="checkbox" name="third[1]" value="1" <?php if (isset($third[1])) echo 'checked'; ?>
-                           title="значения выбранных переключателей в группе переключателей">
-                    <input type="checkbox" name="third[2]" value="2" <?php if (isset($third[2])) echo 'checked'; ?>
-                           title="одностроное поле">
-                    <input type="checkbox" name="third[3]" value="3" <?php if (isset($third[3])) echo 'checked'; ?>
-                           title="выбранные значения из списка со множественным выбором">
-                    <input type="checkbox" name="third[4]" value="4" <?php if (isset($third[4])) echo 'checked'; ?>
-                           title="выбранные значения из списка с единственным выбором">
-                    <input type="checkbox" name="third[5]" value="5" <?php if (isset($third[5])) echo 'checked'; ?>
-                           title="значений выбранной радиокнопки в группе радиокнопок">
-                </div>
+    if (isset($_SESSION['testResult'])) {
+        echo '<p class="searchP swing">Предыдущие результаты</p>';
+        $table = "<table>";
+        $table .= "<tr>
+			        <th>#</th>
+			        <th>Результат</th>
+			       </tr>";
+        $n = 0;
+        foreach ($_SESSION['testResult'] as $res => $val) {
+            $table .= "<tr>";
+            $table .= "<td>" . ++$n . "</td>";
+            $table .= "<td>" . $val . "/10</td>";
+            $table .= "</tr>";
+        }
+        $table .= "</table> ";
+        echo $table;
+    } else echo '<p class="notFind">Нет предыдущих результатов!</p>';
 
-            </fieldset>
-            <input type="submit" value="Сохранить">
-            <input type="reset" value="Очистить">
-        </form>
-    </div>
+    if (isset($_GET['new']) && ($_GET['new'] == 'yes') && $score != -1) {
+        date_default_timezone_set("UTC");
+        $now = time();
+        $_SESSION['testResult'][$now] = $score;
+        unset($_GET['new']);
+    }
+    ?>
+
     <div class="npBtn">
-        <a href="2.php">Preview</a>
-        <a href="4.php">Next</a>
+        <a href="1.php">Пройти заново</a>
     </div>
 
 </main>

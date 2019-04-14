@@ -1,10 +1,10 @@
 <?php
 session_start();
-$third = '';
+$sixth = '';
 if (!empty($_GET))
-    $_SESSION['test']['third'] = $_GET['third'];
-if (isset($_SESSION['test']['third']))
-    $third = $_SESSION['test']['third'];
+    $_SESSION['test']['sixth'] = $_GET['sixth'];
+if (isset($_SESSION['test']['sixth']))
+    $sixth = $_SESSION['test']['sixth'];
 ?>
 
 <!DOCTYPE HTML>
@@ -67,22 +67,25 @@ if (isset($_SESSION['test']['third']))
 <main>
 
     <div class="forms">
-        <form name="test3">
+        <form name="test6">
             <fieldset>
-                <legend>Вопрос №3</legend>
+                <legend>Вопрос №6</legend>
 
-                <label for="third">Укажите, какие элементы формы можно передавать через ассоциативные массивы:</label>
+                <label for="sixth">
+                    Укажите результат выполнения следующего кода:<br>
+                    $n = 5;<br>
+                    echo $n++;<br>
+                    Выберите один ответ:
+                </label>
                 <div>
-                    <input type="checkbox" name="third[1]" value="1" <?php if (isset($third[1])) echo 'checked'; ?>
-                           title="значения выбранных переключателей в группе переключателей">
-                    <input type="checkbox" name="third[2]" value="2" <?php if (isset($third[2])) echo 'checked'; ?>
-                           title="одностроное поле">
-                    <input type="checkbox" name="third[3]" value="3" <?php if (isset($third[3])) echo 'checked'; ?>
-                           title="выбранные значения из списка со множественным выбором">
-                    <input type="checkbox" name="third[4]" value="4" <?php if (isset($third[4])) echo 'checked'; ?>
-                           title="выбранные значения из списка с единственным выбором">
-                    <input type="checkbox" name="third[5]" value="5" <?php if (isset($third[5])) echo 'checked'; ?>
-                           title="значений выбранной радиокнопки в группе радиокнопок">
+                    <input name="sixth" type="radio" value="1" title="4"
+                        <?php if ($sixth == '1') echo 'checked'; ?>>
+                    <input name="sixth" type="radio" value="2" title="этот код выдаст ошибку"
+                        <?php if ($sixth == '2') echo 'checked'; ?>>
+                    <input name="sixth" type="radio" value="3" title="6"
+                        <?php if ($sixth == '3') echo 'checked'; ?>>
+                    <input name="sixth" type="radio" value="4" title="5"
+                        <?php if ($sixth == '4') echo 'checked'; ?>>
                 </div>
 
             </fieldset>
@@ -91,10 +94,9 @@ if (isset($_SESSION['test']['third']))
         </form>
     </div>
     <div class="npBtn">
-        <a href="2.php">Preview</a>
-        <a href="4.php">Next</a>
+        <a href="5.php">Preview</a>
+        <a href="7.php">Next</a>
     </div>
-
 </main>
 
 <!--<aside>

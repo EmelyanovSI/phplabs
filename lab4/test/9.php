@@ -1,10 +1,10 @@
 <?php
 session_start();
-$third = '';
+$ninth = '';
 if (!empty($_GET))
-    $_SESSION['test']['third'] = $_GET['third'];
-if (isset($_SESSION['test']['third']))
-    $third = $_SESSION['test']['third'];
+    $_SESSION['test']['ninth'] = $_GET['ninth'];
+if (isset($_SESSION['test']['ninth']))
+    $ninth = $_SESSION['test']['ninth'];
 ?>
 
 <!DOCTYPE HTML>
@@ -67,23 +67,22 @@ if (isset($_SESSION['test']['third']))
 <main>
 
     <div class="forms">
-        <form name="test3">
+        <form name="test9">
             <fieldset>
-                <legend>Вопрос №3</legend>
+                <legend>Вопрос №9</legend>
 
-                <label for="third">Укажите, какие элементы формы можно передавать через ассоциативные массивы:</label>
-                <div>
-                    <input type="checkbox" name="third[1]" value="1" <?php if (isset($third[1])) echo 'checked'; ?>
-                           title="значения выбранных переключателей в группе переключателей">
-                    <input type="checkbox" name="third[2]" value="2" <?php if (isset($third[2])) echo 'checked'; ?>
-                           title="одностроное поле">
-                    <input type="checkbox" name="third[3]" value="3" <?php if (isset($third[3])) echo 'checked'; ?>
-                           title="выбранные значения из списка со множественным выбором">
-                    <input type="checkbox" name="third[4]" value="4" <?php if (isset($third[4])) echo 'checked'; ?>
-                           title="выбранные значения из списка с единственным выбором">
-                    <input type="checkbox" name="third[5]" value="5" <?php if (isset($third[5])) echo 'checked'; ?>
-                           title="значений выбранной радиокнопки в группе радиокнопок">
-                </div>
+                <label for="ninth">
+                    Запишите результат выполнения<br>
+                    следующего кода:<br>
+                    function Silly() {<br>
+                    static $a=0;<br>
+                    echo $a;<br>
+                    $a++;<br>
+                    }<br>
+                    for($i=0; $i<10; $i++)<br>
+                    Silly();
+                </label>
+                <input id="ninth" name="ninth" type="text" placeholder="0..9" value="<?php echo $ninth; ?>" required>
 
             </fieldset>
             <input type="submit" value="Сохранить">
@@ -91,8 +90,8 @@ if (isset($_SESSION['test']['third']))
         </form>
     </div>
     <div class="npBtn">
-        <a href="2.php">Preview</a>
-        <a href="4.php">Next</a>
+        <a href="8.php">Preview</a>
+        <a href="10.php">Next</a>
     </div>
 
 </main>
