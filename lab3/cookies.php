@@ -136,10 +136,10 @@ if (isset($_COOKIE['theme'])) {
             <li><a href="../lab2/add.php">Text file</a></li>
             <li class="active"><a href="cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Sessions</a></li>
-            <li><a href="../lab5/">Regulars</a></li>
-            <li><a href="../lab6/">Authorization</a></li>
-            <li><a href="../lab7/">Database</a></li>
-            <li><a href="../lab8/">Registration and database</a></li>
+            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li><a href="../lab6/lab6.php">Authorization</a></li>
+            <li><a href="../lab7/lab7.php">Database</a></li>
+            <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>

@@ -1,3 +1,23 @@
+<?php
+session_start();
+$name1 = '';
+$number1 = '';
+$date1 = '';
+$tel1 = '';
+if (!empty($_GET)) {
+    $_SESSION['form2']['name1'] = $_GET['name1'];
+    $_SESSION['form2']['number1'] = $_GET['number1'];
+    $_SESSION['form2']['date1'] = $_GET['date1'];
+    $_SESSION['form2']['tel1'] = $_GET['tel1'];
+}
+if (isset($_SESSION['form2'])) {
+    $name1 = $_SESSION['form2']['name1'];
+    $number1 = $_SESSION['form2']['number1'];
+    $date1 = $_SESSION['form2']['date1'];
+    $tel1 = $_SESSION['form2']['tel1'];
+}
+?>
+
 <!DOCTYPE HTML>
 
 <html lang="en">
@@ -35,10 +55,10 @@
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li class="active"><a href="shop.php">Sessions</a></li>
-            <li><a href="../lab5/">Regulars</a></li>
-            <li><a href="../lab6/">Authorization</a></li>
-            <li><a href="../lab7/">Database</a></li>
-            <li><a href="../lab8/">Registration and database</a></li>
+            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li><a href="../lab6/lab6.php">Authorization</a></li>
+            <li><a href="../lab7/lab7.php">Database</a></li>
+            <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -50,15 +70,15 @@
         <li><a href="bin.php">КОРЗИНА</a></li>
         <li><a href="utils.php">ВРЕМЯ СЧЕТЧИК EMAIL</a></li>
         <li class="active2"><a href="form1.php">ФОРМЫ</a></li>
-        <li><a href="#">СБРОС ФОРМЫ</a></li>
-        <li><a href="#">ТЕСТ</a></li>
+        <li><a href="logout.php">РАЗРУШИТЬ СЕССИЮ</a></li>
+        <li><a href="test/1.php">ТЕСТ</a></li>
     </ul>
 </nav>
 
 <main>
 
     <div class="forms">
-        <form name="form1">
+        <form name="form2">
             <fieldset>
                 <legend>ПОСТУПЛЕНИЕ</legend>
 
@@ -80,7 +100,7 @@
                        min="1970-01-01" max="2070-01-01">
 
                 <label for="tel1">Номер телефона</label>
-                <input id="tel1" name="tel1" type="tel" placeholder="+999-(99)-999-99-99"
+                <input id="tel1" name="tel1" type="tel" placeholder="+999-(99)-999-99-99" value="<?php echo $tel1; ?>"
                        pattern="^((80|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
 
                 <input id="form2request" name="form2request" type="hidden" value="form2request">
@@ -115,9 +135,6 @@
 <script src="../scripts/main.js" type="text/javascript" language="JavaScript"></script>
 <script src="../scripts/jquery-3.4.0.js" type="text/javascript" language="JavaScript"></script>
 <script src="../scripts/navigation.js" type="text/javascript" language="JavaScript"></script>
-<script>
-    showPrice();
-</script>
 
 </body>
 

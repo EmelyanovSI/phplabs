@@ -1,10 +1,10 @@
+let element = $('.subNav');
 let header = $('header').height() + 1;
-let nav = $('.subNav').height();
+let nav = element.height();
 let p = $('nav > p').height() + 20;
 $(function () {
     $(window).scroll(function () {
         let top = $(this).scrollTop();
-        let element = $('.subNav');
         if (top < header + p) {
             element.css('top', (header - top));
             element.css('box-shadow', '0 2px 3px 0 #999');

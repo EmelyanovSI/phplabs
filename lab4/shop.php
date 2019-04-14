@@ -53,10 +53,10 @@ if (isset($_GET['shoeTitle'])) {
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li class="active"><a href="shop.php">Sessions</a></li>
-            <li><a href="../lab5/">Regulars</a></li>
-            <li><a href="../lab6/">Authorization</a></li>
-            <li><a href="../lab7/">Database</a></li>
-            <li><a href="../lab8/">Registration and database</a></li>
+            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li><a href="../lab6/lab6.php">Authorization</a></li>
+            <li><a href="../lab7/lab7.php">Database</a></li>
+            <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -68,8 +68,8 @@ if (isset($_GET['shoeTitle'])) {
         <li><a href="bin.php">КОРЗИНА</a></li>
         <li><a href="utils.php">ВРЕМЯ СЧЕТЧИК EMAIL</a></li>
         <li><a href="form1.php">ФОРМЫ</a></li>
-        <li><a href="#">СБРОС ФОРМЫ</a></li>
-        <li><a href="#">ТЕСТ</a></li>
+        <li><a href="logout.php">РАЗРУШИТЬ СЕССИЮ</a></li>
+        <li><a href="test/1.php">ТЕСТ</a></li>
     </ul>
 </nav>
 

@@ -1,17 +1,20 @@
 <?php
 session_start();
+$name1 = '';
+$manufacturer1 = '';
+$site1 = '';
+$date1 = '';
+$price1 = '';
 if (!empty($_GET)) {
     $_SESSION['form1']['name1'] = $_GET['name1'];
+    $_SESSION['form1']['manufacturer1'] = $_GET['manufacturer1'];
     $_SESSION['form1']['site1'] = $_GET['site1'];
     $_SESSION['form1']['date1'] = $_GET['date1'];
     $_SESSION['form1']['price1'] = $_GET['price1'];
 }
-$name1 = '';
-$site1 = '';
-$date1 = '';
-$price1 = '';
 if (isset($_SESSION['form1'])) {
     $name1 = $_SESSION['form1']['name1'];
+    $manufacturer1 = $_SESSION['form1']['manufacturer1'];
     $site1 = $_SESSION['form1']['site1'];
     $date1 = $_SESSION['form1']['date1'];
     $price1 = $_SESSION['form1']['price1'];
@@ -55,10 +58,10 @@ if (isset($_SESSION['form1'])) {
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li class="active"><a href="shop.php">Sessions</a></li>
-            <li><a href="../lab5/">Regulars</a></li>
-            <li><a href="../lab6/">Authorization</a></li>
-            <li><a href="../lab7/">Database</a></li>
-            <li><a href="../lab8/">Registration and database</a></li>
+            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li><a href="../lab6/lab6.php">Authorization</a></li>
+            <li><a href="../lab7/lab7.php">Database</a></li>
+            <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -70,8 +73,8 @@ if (isset($_SESSION['form1'])) {
         <li><a href="bin.php">КОРЗИНА</a></li>
         <li><a href="utils.php">ВРЕМЯ СЧЕТЧИК EMAIL</a></li>
         <li class="active2"><a href="form1.php">ФОРМЫ</a></li>
-        <li><a href="#">СБРОС ФОРМЫ</a></li>
-        <li><a href="#">ТЕСТ</a></li>
+        <li><a href="logout.php">РАЗРУШИТЬ СЕССИЮ</a></li>
+        <li><a href="test/1.php">ТЕСТ</a></li>
     </ul>
 </nav>
 
@@ -84,6 +87,17 @@ if (isset($_SESSION['form1'])) {
 
                 <label for="name1">Наименование</label>
                 <input id="name1" name="name1" type="text" placeholder="Туфли" value="<?php echo $name1; ?>" required>
+
+                <label for="manufacturerInput1">Производитель</label>
+                <input id="manufacturerInput1" name="manufacturer1" type="text" placeholder="Лубутен"
+                       value="<?php echo $manufacturer1; ?>" list="manufacturer1" required>
+                <datalist id="manufacturer1">
+                    <option value="Nike" name=""></option>
+                    <option value="Supreme" name=""></option>
+                    <option value="Adidas" name=""></option>
+                    <option value="Gucci" name=""></option>
+                    <option value="Puma" name=""></option>
+                </datalist>
 
                 <label for="site1">Сайт</label>
                 <input id="site1" name="site1" type="url"
@@ -107,7 +121,7 @@ if (isset($_SESSION['form1'])) {
     </div>
 
     <div class="npBtn">
-        <a href="#">Preview</a>
+        <a>Preview</a>
         <a href="form2.php">Next</a>
     </div>
 
