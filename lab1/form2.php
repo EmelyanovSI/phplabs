@@ -32,8 +32,8 @@
             <li class="active"><a href="form1.php">Form</a></li>
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
-            <li><a href="../lab4/shop.php">Sessions</a></li>
-            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li><a href="../lab4/shop.php">Session</a></li>
+            <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/lab6.php">Authorization</a></li>
             <li><a href="../lab7/lab7.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
@@ -69,11 +69,13 @@
                 </select>
 
                 <label for="number1">Количество</label>
-                <input id="number1" name="number1" type="number" min="1" max="100" value="1">
+                <input id="number1" name="number1" type="number" min="1" max="100" value="1"
+                       pattern="[0-9]{3}">
 
                 <label for="date1">Дата поступления</label>
                 <input id="date1" name="date1" type="date" placeholder="2000-03-29"
-                       min="1970-01-01" max="2070-01-01">
+                       min="1970-01-01" max="2070-01-01"
+                       pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                 <label for="tel1">Номер телефона</label>
                 <input id="tel1" name="tel1" type="tel" placeholder="+999-(99)-999-99-99"
@@ -101,11 +103,13 @@
                 </select>
 
                 <label for="number2">Количество</label>
-                <input id="number2" name="number2" type="number" min="1" max="100" value="1">
+                <input id="number2" name="number2" type="number" min="1" max="100" value="1"
+                       pattern="[0-9]{3}">
 
                 <label for="date2">Дата поступления</label>
                 <input id="date2" name="date2" type="date" placeholder="2000-03-29"
-                       min="1970-01-01" max="2070-01-01">
+                       min="1970-01-01" max="2070-01-01"
+                       pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                 <label for="tel2">Номер телефона</label>
                 <input id="tel2" name="tel2" type="tel" placeholder="+999-(99)-999-99-99"

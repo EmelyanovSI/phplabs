@@ -33,8 +33,8 @@
             <li><a href="../lab1/form1.php">Form</a></li>
             <li class="active"><a href="add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
-            <li><a href="../lab4/shop.php">Sessions</a></li>
-            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li><a href="../lab4/shop.php">Session</a></li>
+            <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/lab6.php">Authorization</a></li>
             <li><a href="../lab7/lab7.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>

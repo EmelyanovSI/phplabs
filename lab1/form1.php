@@ -32,8 +32,8 @@
             <li class="active"><a href="form1.php">Form</a></li>
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
-            <li><a href="../lab4/shop.php">Sessions</a></li>
-            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li><a href="../lab4/shop.php">Session</a></li>
+            <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/lab6.php">Authorization</a></li>
             <li><a href="../lab7/lab7.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
@@ -59,11 +59,13 @@
                 <legend>АССОРТИМЕНТ ( РЕЗУЛЬТАТ )</legend>
 
                 <label for="name1">Наименование</label>
-                <input id="name1" name="name1" type="text" placeholder="Туфли" required>
+                <input id="name1" name="name1" type="text" placeholder="Туфли" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
 
                 <label for="manufacturerInput1">Производитель</label>
                 <input id="manufacturerInput1" name="manufacturer1" type="text" placeholder="Лубутен"
-                       list="manufacturer1" required>
+                       list="manufacturer1" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
                 <datalist id="manufacturer1">
                     <option value="Nike" name=""></option>
                     <option value="Supreme" name=""></option>
@@ -74,11 +76,13 @@
 
                 <label for="site1">Сайт</label>
                 <input id="site1" name="site1" type="url"
-                       placeholder="http://bukinshoes.ru" value="http://bukinshoes.ru">
+                       placeholder="http://bukinshoes.ru" value="http://bukinshoes.ru"
+                       pattern="http://+[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
 
                 <label for="date1">Дата выпуска</label>
                 <input id="date1" name="date1" type="date" placeholder="2000-03-29"
-                       min="1970-01-01" max="2070-01-01">
+                       min="1970-01-01" max="2070-01-01"
+                       pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                 <label for="price1">Цена</label>
                 <input id="price1" name="price1" type="range" min="100" max="5000" step="100" value="1000">
@@ -96,11 +100,13 @@
                 <legend>АССОРТИМЕНТ</legend>
 
                 <label for="name2">Наименование</label>
-                <input id="name2" name="name2" type="text" placeholder="Туфли" required>
+                <input id="name2" name="name2" type="text" placeholder="Туфли" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
 
                 <label for="manufacturerInput2">Производитель</label>
                 <input id="manufacturerInput2" name="manufacturer2" type="text" placeholder="Лубутен"
-                       list="manufacturer2" required>
+                       list="manufacturer2" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
                 <datalist id="manufacturer2">
                     <option value="Nike" name=""></option>
                     <option value="Supreme" name=""></option>
@@ -111,11 +117,13 @@
 
                 <label for="site2">Сайт</label>
                 <input id="site2" name="site2" type="url"
-                       placeholder="http://bukinshoes.ru" value="http://bukinshoes.ru">
+                       placeholder="http://bukinshoes.ru" value="http://bukinshoes.ru"
+                       pattern="http://+[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
 
                 <label for="date2">Дата выпуска</label>
                 <input id="date2" name="date2" type="date" placeholder="2000-03-29"
-                       min="1970-01-01" max="2070-01-01">
+                       min="1970-01-01" max="2070-01-01"
+                       pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                 <label for="price2">Цена</label>
                 <input id="price2" name="price2" type="range" min="100" max="5000" step="100" value="1000">

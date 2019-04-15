@@ -57,8 +57,8 @@ if (isset($_SESSION['form1'])) {
             <li><a href="../lab1/form1.php">Form</a></li>
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
-            <li class="active"><a href="shop.php">Sessions</a></li>
-            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li class="active"><a href="shop.php">Session</a></li>
+            <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/lab6.php">Authorization</a></li>
             <li><a href="../lab7/lab7.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
@@ -86,11 +86,13 @@ if (isset($_SESSION['form1'])) {
                 <legend>АССОРТИМЕНТ</legend>
 
                 <label for="name1">Наименование</label>
-                <input id="name1" name="name1" type="text" placeholder="Туфли" value="<?php echo $name1; ?>" required>
+                <input id="name1" name="name1" type="text" placeholder="Туфли" value="<?php echo $name1; ?>" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
 
                 <label for="manufacturerInput1">Производитель</label>
                 <input id="manufacturerInput1" name="manufacturer1" type="text" placeholder="Лубутен"
-                       value="<?php echo $manufacturer1; ?>" list="manufacturer1" required>
+                       value="<?php echo $manufacturer1; ?>" list="manufacturer1" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
                 <datalist id="manufacturer1">
                     <option value="Nike" name=""></option>
                     <option value="Supreme" name=""></option>
@@ -101,11 +103,13 @@ if (isset($_SESSION['form1'])) {
 
                 <label for="site1">Сайт</label>
                 <input id="site1" name="site1" type="url"
-                       placeholder="http://bukinshoes.ru" value="<?php echo $site1; ?>">
+                       placeholder="http://bukinshoes.ru" value="<?php echo $site1; ?>"
+                       pattern="http://+[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
 
                 <label for="date1">Дата выпуска</label>
                 <input id="date1" name="date1" type="date" placeholder="2000-03-29" value="<?php echo $date1; ?>"
-                       min="1970-01-01" max="2070-01-01">
+                       min="1970-01-01" max="2070-01-01"
+                       pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                 <label for="price1">Цена</label>
                 <input id="price1" name="price1" type="range" min="100" max="5000" step="100"

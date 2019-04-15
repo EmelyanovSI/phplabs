@@ -34,8 +34,8 @@
             <li><a href="../lab1/form1.php">Form</a></li>
             <li class="active"><a href="add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
-            <li><a href="../lab4/shop.php">Sessions</a></li>
-            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li><a href="../lab4/shop.php">Session</a></li>
+            <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/lab6.php">Authorization</a></li>
             <li><a href="../lab7/lab7.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
@@ -61,11 +61,13 @@
                 <legend>АССОРТИМЕНТ</legend>
 
                 <label for="name1">Наименование</label>
-                <input id="name1" name="name1" type="text" placeholder="Туфли" required>
+                <input id="name1" name="name1" type="text" placeholder="Туфли" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
 
                 <label for="manufacturerInput1">Производитель</label>
                 <input id="manufacturerInput1" name="manufacturer1" type="text" placeholder="Лубутен"
-                       list="manufacturer1" required>
+                       list="manufacturer1" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
                 <datalist id="manufacturer1">
                     <option value="Nike" name=""></option>
                     <option value="Supreme" name=""></option>
@@ -76,11 +78,13 @@
 
                 <label for="site1">Сайт</label>
                 <input id="site1" name="site1" type="url"
-                       placeholder="http://bukinshoes.ru" value="http://bukinshoes.ru">
+                       placeholder="http://bukinshoes.ru" value="http://bukinshoes.ru"
+                       pattern="http://+[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
 
                 <label for="date1">Дата выпуска</label>
                 <input id="date1" name="date1" type="date" placeholder="2000-03-29"
-                       min="1970-01-01" max="2070-01-01">
+                       min="1970-01-01" max="2070-01-01"
+                       pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                 <label for="price1">Цена</label>
                 <input id="price1" name="price1" type="range" min="100" max="5000" step="100" value="1000">
@@ -108,11 +112,13 @@
                 </select>
 
                 <label for="number2">Количество</label>
-                <input id="number2" name="number2" type="number" min="1" max="100" value="1">
+                <input id="number2" name="number2" type="number" min="1" max="100" value="1"
+                       pattern="[0-9]{3}">
 
                 <label for="date2">Дата поступления</label>
                 <input id="date2" name="date2" type="date" placeholder="2000-03-29"
-                       min="1970-01-01" max="2070-01-01">
+                       min="1970-01-01" max="2070-01-01"
+                       pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                 <label for="tel2">Номер телефона</label>
                 <input id="tel2" name="tel2" type="tel" placeholder="+999-(99)-999-99-99"
@@ -151,11 +157,13 @@
 
                 <label for="date3">Дата продажи</label>
                 <input id="date3" name="date3" type="date" placeholder="2000-03-29"
-                       min="1970-01-01" max="2070-01-01">
+                       min="1970-01-01" max="2070-01-01"
+                       pattern="\d{1,2}/\d{1,2}/\d{4}">
 
                 <label for="email3">E-mail</label>
                 <input id="email3" name="email3" type="email"
-                       value="emelyanov@gmail.com" placeholder="emelyanov@gmail.com">
+                       value="emelyanov@gmail.com" placeholder="emelyanov@gmail.com"
+                       pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
 
                 <input id="form3request" name="form3request" type="hidden" value="form3request">
 

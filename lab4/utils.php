@@ -47,8 +47,8 @@ if (isset($_GET['Email']))
             <li><a href="../lab1/form1.php">Form</a></li>
             <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
-            <li class="active"><a href="shop.php">Sessions</a></li>
-            <li><a href="../lab5/lab5.php">Regulars</a></li>
+            <li class="active"><a href="shop.php">Session</a></li>
+            <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/lab6.php">Authorization</a></li>
             <li><a href="../lab7/lab7.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
@@ -95,7 +95,8 @@ if (isset($_GET['Email']))
             <fieldset>
                 <legend>NEED TO REMEMBER</legend>
                 <label for="Email">Email</label>
-                <input name="Email" type="text" placeholder="Email" required>
+                <input name="Email" type="text" placeholder="Email" required
+                       pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
             </fieldset>
             <input type="submit" value="Запомнить">
         </form>
@@ -105,16 +106,20 @@ if (isset($_GET['Email']))
                 <legend>MAGIC</legend>
 
                 <label for="name">Имя</label>
-                <input name="name" type="text" placeholder="Имя" required>
+                <input name="name" type="text" placeholder="Имя" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
 
                 <label for="family">Фамилия</label>
-                <input name="family" type="text" placeholder="Фамилия" required>
+                <input name="family" type="text" placeholder="Фамилия" required
+                       pattern="^[A-ZА-ЯЁ][a-zA-Zа-яА-ЯЁ\s]*$">
 
                 <label for="password">Пароль</label>
-                <input name="password" type="password" placeholder="****" required>
+                <input name="password" type="password" placeholder="****" required
+                       pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
 
                 <label for="magicEmail">Email</label>
                 <input name="magicEmail" type="text" placeholder="Email"
+                       pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}"
                        value='<?php
                        if (isset($_SESSION['Email']))
                            echo '' . $_SESSION['Email'];
