@@ -45,17 +45,26 @@
 </header>
 
 <nav class="subNav">
-    <p>Регулярные выражения</p>
-    <ul class="subMenu">
-        <li class="active2"><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-    </ul>
+    <p class="mainP"><a href="regular.html">Регулярные выражения</a></p>
 </nav>
 
 <main>
 
-
+    <div class="forms">
+        <form name="form" action="regular.php">
+            <fieldset>
+                <legend>TASKS</legend>
+            <select name="numberTask" id="numberTask">
+                <option>Task№1</option>
+                <option>Task№2</option>
+            </select>
+            <label for="numberTask" id="task">
+                Выбрать из списка путей файлов, файлы, которые имеют расширение, указанное  в input.
+            </label>
+            </fieldset>
+            <input type="submit" name="submit" value="Выполнить">
+        </form>
+    </div>
 
 </main>
 
@@ -76,6 +85,9 @@
 <script src="../scripts/main.js" type="text/javascript" language="JavaScript"></script>
 <script src="../scripts/jquery-3.4.0.js" type="text/javascript" language="JavaScript"></script>
 <script src="../scripts/navigation.js" type="text/javascript" language="JavaScript"></script>
+<script>
+    regular();
+</script>
 
 </body>
 

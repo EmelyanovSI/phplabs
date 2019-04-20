@@ -3,8 +3,10 @@ let header = $('header').height() + 1;
 let nav = element.height();
 let p = $('nav > p').height() + 20;
 $(function () {
+    let top = 0;
+    if (top === 0) element.css('top', header);
     $(window).scroll(function () {
-        let top = $(this).scrollTop();
+        top = $(this).scrollTop();
         if (top < header + p) {
             element.css('top', (header - top));
             element.css('box-shadow', '0 2px 3px 0 #999');
@@ -85,5 +87,3 @@ $(document).ready(function() {
     });
 });
 */
-
-

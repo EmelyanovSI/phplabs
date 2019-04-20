@@ -57,3 +57,15 @@ function showPrice() {
         document.getElementById('showPrice2').textContent = document.getElementById('price2').value;
     });
 }
+
+//lab5
+const task1 = "Выбрать из списка путей файлов, файлы, которые имеют расширение, указанное  в input.";
+const task2 = "Регулярное выражение, убирающее протокол из адреса ссылки.";
+function regular() {
+    let numberTask = document.getElementById('numberTask');
+    let task = document.getElementById('task');
+
+    numberTask.addEventListener('change', () => {
+        task.textContent = numberTask.value === "Task№1" ? task1 : task2;
+    });
+}

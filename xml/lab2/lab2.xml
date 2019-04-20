@@ -5,6 +5,8 @@
 <shoeShop company="bukin.com">
 
     <style id="style">
+		{ }
+		style { display: none; }
         season[name="no"] { background: #ffffe0; }
         gender[sex="emale"] > model > type > modelName { color: #ff0000; }
     </style>

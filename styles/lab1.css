@@ -29,7 +29,7 @@ fieldset legend {
 fieldset input,
 fieldset select {
     outline: none;
-    height: 30px;
+    /*height: 30px;*/ /*20.04.19*/
     width: 200px;
     color: #2f3640;
     background: #f1f3f4;

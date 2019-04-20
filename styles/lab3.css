@@ -27,7 +27,3 @@ p + input[type="submit"]:hover {
     background: #50fc5c;
     color: white;
 }
-
-fieldset input {
-    height: 20px; /* i do not know why.. */
-}

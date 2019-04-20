@@ -25,6 +25,7 @@
             <input id="searchText" type="search" name="searchText" placeholder="Search for labs!" autofocus>
             <button id="searchBtn" type="button" value="search"><i class="fas fa-search"></i></button>
         </form>
+        <a href=""><img class="menuImg" src="images/greenColumnMenu.png" alt="sub-menu img"></a>
     </div>
     <nav class="navHeader">
         <ul class="mainMenu">

@@ -1,8 +1,11 @@
+* { transition: 0.4s; }
+* { margin: 0; padding: 0; }
 html { font-family: 'Roboto', sans-serif; }
 body {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
+html, body { height: 100%; }
 header {
     display: flex;
     flex-direction: column;
@@ -23,15 +26,6 @@ a {
 }
 .navHeader { }
 
-.menuImg,
-.title,
-.searchBox,
-.searchText,
-.searchBtn,
-.php {
-    transition: 0.4s;
-}
-
 .menuImg {
     width: 4em;
     height: 4em;
@@ -51,7 +45,6 @@ a {
     display: flex;
     flex-direction: row;
     color: #cccccc;
-    transition: 0.4s;
 }
 .title:hover {
     color: #2f3640;
@@ -74,7 +67,6 @@ a {
     height: 40px;
     border-radius: 40px;
     padding: 10px; /*5px*/
-    transition: 0.4s;
     border: 0 solid #ececec; /*1px*/
 }
 /*#searchBox:hover {
@@ -100,7 +92,6 @@ a {
     padding: 0;
     color: #adadad;
     font-size: 16px;
-    transition: 0.4s;
     line-height: 40px;
     width: 0;
     text-align: center;
@@ -134,7 +125,6 @@ input#searchText::-webkit-search-results-decoration { display: none; }
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.4s;
     border: none;
     outline: none;
     cursor: pointer;
@@ -226,6 +216,8 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px;
+
+    flex: 1 0 auto;
 }
 
 img.php {
@@ -234,12 +226,14 @@ img.php {
 }
 
 footer {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     border-top: 1px solid #ececec;
     box-shadow: 0 0 4px 2px #ccc;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    flex: 0 0 auto;
 }
 footer a:hover {
     color: #50bc5c;
@@ -329,9 +323,9 @@ footer a:active {
 /***************navigation***************/
 /*header,*/
 .subNav {
+    transition: none;
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 /****************************************/
-
