@@ -25,7 +25,23 @@
             <input id="searchText" type="search" name="searchText" placeholder="Search for labs!" autofocus>
             <button id="searchBtn" type="button" value="search"><i class="fas fa-search"></i></button>
         </form>
-        <a href=""><img class="menuImg" src="images/greenColumnMenu.png" alt="sub-menu img"></a>
+        <div class="indexSubMenuDiv">
+            <a href="index.php">
+                <img class="menuImg indexSubMenuDivImg" src="images/greenColumnMenu.png" alt="sub-menu img">
+            </a>
+            <nav class="indexSubNav">
+                <ul class="indexSubMenu">
+                    <li><a href="xml/lab1/lab1.xml">xmlab1</a></li>
+                    <li><a href="xml/lab2/lab2.xml">xmlab2</a></li>
+                    <li><a href="xml/lab3/lab3.xml">xmlab3</a></li>
+                    <li><a href="xml/lab4/lab4.xml">xmlab4</a></li>
+                    <li><a href="xml/lab5/lab5.xml">xmlab5</a></li>
+                    <li><a href="xml/lab6/lab6.xml">xmlab6</a></li>
+                    <li><a href="kr1/add.php">phpKr1</a></li>
+                    <li><a href="kr2/">phpKr2</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <nav class="navHeader">
         <ul class="mainMenu">

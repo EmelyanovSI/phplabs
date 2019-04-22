@@ -61,11 +61,21 @@ function showPrice() {
 //lab5
 const task1 = "Выбрать из списка путей файлов, файлы, которые имеют расширение, указанное  в input.";
 const task2 = "Регулярное выражение, убирающее протокол из адреса ссылки.";
+
 function regular() {
     let numberTask = document.getElementById('numberTask');
     let task = document.getElementById('task');
+    let input = document.getElementById('input');
 
     numberTask.addEventListener('change', () => {
-        task.textContent = numberTask.value === "Task№1" ? task1 : task2;
+        if (numberTask.value === "Task№1") {
+            task.textContent = task1;
+            input.style.display = '';
+            input.required = true;
+        } else {
+            task.textContent = task2;
+            input.style.display = 'none';
+            input.required = false;
+        }
     });
 }

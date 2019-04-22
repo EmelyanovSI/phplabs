@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>phpLab4</title>
+    <title>phpLab5</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/style.css">
@@ -50,7 +50,35 @@
 
 <main>
 
+    <?php
+    if ($_GET['numberTask'] == "Task№1") {
+        $file = "files.txt";
+        $f = fopen($file, "r");
+        flock($f, LOCK_SH | LOCK_NB);
 
+        while (!feof($f)) {
+            $s = fgets($f);
+            if (strcmp($s, "") != 0 && preg_match('/\.' . $_GET["input"] . '/', $s))
+                echo "<p class='notFind swing'>" . $s . "</p>";
+        }
+
+        flock($f, LOCK_UN);
+        fclose($f);
+    } else {
+        $file = "links.txt";
+        $f = fopen($file, "r");
+        flock($f, LOCK_SH | LOCK_NB);
+
+        while (!feof($f)) {
+            $s = fgets($f);
+            if (strcmp($s, "") != 0)
+                echo "<p class='notFind swing'>" . preg_replace('/^\D+:\/\//', '', $s) . "</p>";
+        }
+
+        flock($f, LOCK_UN);
+        fclose($f);
+    }
+    ?>
 
 </main>
 

@@ -329,3 +329,33 @@ footer a:active {
     z-index: 1000;
 }
 /****************************************/
+/*index.php xml kr*/
+.indexSubMenu {
+    list-style: none;
+    /*display: none;*/
+    position: absolute;
+    z-index: 1001;
+    opacity: 0;
+}
+.indexSubMenu li {
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 #999;
+    background: #f7f9fa;
+}
+
+.indexSubMenuDiv:hover .indexSubMenu {
+    opacity: 1;
+    /*display: block;*/
+}
+.indexSubMenuDiv:hover .indexSubMenuDivImg {
+    filter: saturate(170%);
+}
+.indexSubMenu li:hover {
+    box-shadow: 0 5px 6px 3px #999;
+}
+.indexSubMenu li:hover a {
+    color: #2f3640;
+}
+/***********************/
