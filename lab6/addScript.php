@@ -3,12 +3,16 @@
 <html lang="en">
 
 <head>
-    <title>phpLab2</title>
+    <title>phpLab6</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/lab1.css">
     <link rel="stylesheet" href="../styles/lab2.css">
+    <link rel="stylesheet" href="../styles/lab3.css">
+    <link rel="stylesheet" href="../styles/lab4.css">
+    <link rel="stylesheet" href="../styles/lab5.css">
+    <link rel="stylesheet" href="../styles/lab6.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossorigin="anonymous">
@@ -27,15 +31,16 @@
             <button id="searchBtn" type="submit" value="search"><i class="fas fa-search"></i></button>
             <input id="search" name="search" type="hidden" value="search">
         </form>
+        <?php include('logButton.php'); ?>
     </div>
     <nav class="navHeader">
         <ul class="mainMenu">
             <li><a href="../lab1/form1.php">Form</a></li>
-            <li class="active"><a href="add.php">Text file</a></li>
+            <li><a href="add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
-            <li><a href="../lab6/add.php">Authorization</a></li>
+            <li class="active"><a href="add.php">Authorization</a></li>
             <li><a href="../lab7/lab7.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>

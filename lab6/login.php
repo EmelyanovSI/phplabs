@@ -1,10 +1,45 @@
-<?php ?>
+<?php
+
+function user_exists($login, $password)
+{
+    $authfile = fopen('auth.txt', 'r');
+    while (!feof($authfile)) {
+        $entry = fgets($authfile);
+        if (!empty($entry)) {
+            $attr = explode(';', $entry);
+            $login = $attr[0];
+            $password = $attr[1];
+            if ($login == $_POST['login'] and md5($_POST['password']) == $password) {
+                fclose($authfile);
+                return $attr[2];
+            }
+        }
+    }
+    fclose($authfile);
+    return -1;
+}
+
+
+$logError = false;
+if (!empty($_POST)) {
+    $logRes = user_exists($_POST['login'], $_POST['password']);
+    if ($logRes != -1) {
+        session_start();
+        $_SESSION['auth']['success'] = true;
+        $_SESSION['auth']['login'] = $_POST['login'];
+        $_SESSION['auth']['rights'] = $logRes;
+        header("Location: http://localhost:63342/phplabs/lab6/add.php");
+        exit;
+    } else $logError = true;
+}
+?>
+
 <!DOCTYPE HTML>
 
 <html lang="en">
 
 <head>
-    <title>phpLab4</title>
+    <title>phpLab6</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/style.css">
@@ -30,6 +65,7 @@
             <input id="searchText" type="search" name="searchText" placeholder="Search for labs!" autofocus>
             <button id="searchBtn" type="button" value="search"><i class="fas fa-search"></i></button>
         </form>
+        <?php include('logButton.php'); ?>
     </div>
     <nav class="navHeader">
         <ul class="mainMenu">
@@ -38,7 +74,7 @@
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
-            <li class="active"><a href="lab6.php">Authorization</a></li>
+            <li class="active"><a href="add.php">Authorization</a></li>
             <li><a href="../lab7/lab7.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>
@@ -46,15 +82,36 @@
 </header>
 
 <nav class="subNav">
-    <p>lab6</p>
+    <p>Учет продаж в обувном магазине</p>
     <ul class="subMenu">
-        <li class="active2"><a href="lab6.php">lab6</a></li>
+        <li><a href="add.php">ДОБАВИТЬ ДАННЫЕ</a></li>
+        <li><a href="view.php">ПРОСМОТР ДАННЫХ</a></li>
+        <li><a href="sorting.php">СОРТИРОВКА ДАННЫХ</a></li>
+        <li><a href="search.php">ПОИСК ДАННЫХ</a></li>
     </ul>
 </nav>
 
 <main>
 
+    <div class="forms">
+        <form name="logform" action="" method="POST">
+            <?php
+            if (!empty($_POST) and $logError) echo '<p class="notFind">Неверный логин и/или пароль!</p>';
+            ?>
+            <fieldset>
+                <legend>Войти на сайт</legend>
 
+                <label for="login">Логин</label>
+                <input type="text" name="login" placeholder="login" required>
+
+                <label for="password">Пароль</label>
+                <input type="password" name="password" placeholder="password" required>
+            </fieldset>
+
+            <input type="submit" value="Войти">
+            <input type="reset" value="Отмена">
+        </form>
+    </div>
 
 </main>
 
