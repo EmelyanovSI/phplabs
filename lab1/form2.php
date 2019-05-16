@@ -35,7 +35,7 @@
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/add.php">Authorization</a></li>
-            <li><a href="../lab7/lab7.php">Database</a></li>
+            <li><a href="../lab7/add.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>
     </nav>

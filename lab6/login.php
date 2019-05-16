@@ -1,6 +1,6 @@
 <?php
 
-function user_exists($login, $password)
+function user_exists()
 {
     $authfile = fopen('auth.txt', 'r');
     while (!feof($authfile)) {
@@ -8,10 +8,10 @@ function user_exists($login, $password)
         if (!empty($entry)) {
             $attr = explode(';', $entry);
             $login = $attr[0];
-            $password = $attr[1];
+            $password = $attr[2];
             if ($login == $_POST['login'] and md5($_POST['password']) == $password) {
                 fclose($authfile);
-                return $attr[2];
+                return $attr[3];
             }
         }
     }
@@ -20,10 +20,11 @@ function user_exists($login, $password)
 }
 
 
-$logError = false;
+$logError = true;
 if (!empty($_POST)) {
-    $logRes = user_exists($_POST['login'], $_POST['password']);
+    $logRes = user_exists();
     if ($logRes != -1) {
+        $logError = false;
         session_start();
         $_SESSION['auth']['success'] = true;
         $_SESSION['auth']['login'] = $_POST['login'];
@@ -75,7 +76,7 @@ if (!empty($_POST)) {
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
             <li class="active"><a href="add.php">Authorization</a></li>
-            <li><a href="../lab7/lab7.php">Database</a></li>
+            <li><a href="../lab7/add.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>
     </nav>
@@ -94,7 +95,7 @@ if (!empty($_POST)) {
 <main>
 
     <div class="forms">
-        <form name="logform" action="" method="POST">
+        <form name="logForm" action="loginScript.php" method="POST">
             <?php
             if (!empty($_POST) and $logError) echo '<p class="notFind">Неверный логин и/или пароль!</p>';
             ?>
@@ -104,7 +105,7 @@ if (!empty($_POST)) {
                 <label for="login">Логин</label>
                 <input type="text" name="login" placeholder="login" required>
 
-                <label for="password">Пароль</label>
+                <label for="password">Пароль №1</label>
                 <input type="password" name="password" placeholder="password" required>
             </fieldset>
 

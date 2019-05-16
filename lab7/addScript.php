@@ -3,16 +3,14 @@
 <html lang="en">
 
 <head>
-    <title>phpLab6</title>
+    <title>phpLab7</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/lab1.css">
     <link rel="stylesheet" href="../styles/lab2.css">
     <link rel="stylesheet" href="../styles/lab3.css">
-    <link rel="stylesheet" href="../styles/lab4.css">
-    <link rel="stylesheet" href="../styles/lab5.css">
-    <link rel="stylesheet" href="../styles/lab6.css">
+    <link rel="stylesheet" href="../styles/lab7.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossorigin="anonymous">
@@ -31,7 +29,6 @@
             <button id="searchBtn" type="submit" value="search"><i class="fas fa-search"></i></button>
             <input id="search" name="search" type="hidden" value="search">
         </form>
-        <?php include('logButton.php'); ?>
     </div>
     <nav class="navHeader">
         <ul class="mainMenu">
@@ -40,8 +37,8 @@
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
-            <li class="active"><a href="add.php">Authorization</a></li>
-            <li><a href="../lab7/add.php">Database</a></li>
+            <li><a href="../lab6/add.php">Authorization</a></li>
+            <li class="active"><a href="add.php">Database</a></li>
             <li><a href="../lab8/lab8.php">Registration and database</a></li>
         </ul>
     </nav>
@@ -61,39 +58,59 @@
 
     <?php
     if (isset($_GET['form1Btn'])) {
-        $form1File = fopen("range.txt", 'a') or die("Не удалось создать файл!");
-        flock($form1File, LOCK_EX); //БЛОКИРОВКА ФАЙЛА
 
-        $table = "";
-        $table .= $_GET['name1'] . ";";
-        $table .= $_GET['manufacturer1'] . ";";
-        $table .= $_GET['site1'] . ";";
-        $table .= $_GET['date1'] . ";";
-        $table .= $_GET['price1'] . ";";
-        $table .= PHP_EOL;
+        $host = 'localhost'; //имя хоста, на локальном компьютере это localhost
+        $user = 'root'; //имя пользователя, по умолчанию это root
+        $password = 'usbw'; //пароль, по умолчанию пустой
+        $db_name = 'test'; //имя базы данных
 
-        fwrite($form1File, $table);
-        flock($form1File, LOCK_UN); //СНЯТИЕ БЛОКИРОВКИ
-        fclose($form1File);
+        $link = mysqli_connect($host, $user, $password, $db_name);
+        mysqli_query($link, "SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
+        mysqli_query($link, "SET CHARACTER SET 'utf8'");
+        mysqli_set_charset($link, 'utf8');
+
+        $name1 = $_GET['name1'];
+        $manufacturer1 = $_GET['manufacturer1'];
+        $number = $_GET['site1'];
+        $date1 = $_GET['date1'];
+        $price1 = $_GET['price1'];
+
+        $query = "INSERT INTO range VALUES(NULL, '$name1', '$manufacturer1', '$number','$date1', '$price1')";
+        $result = mysqli_query($link, $query) or die(mysqli_error($link));
+        mysqli_close($link);
+
     } elseif (isset($_GET['form2Btn'])) {
-        $form2File = fopen("receipt.txt", 'a') or die("Не удалось создать файл!");
-        flock($form2File, LOCK_EX); //БЛОКИРОВКА ФАЙЛА
 
-        $table = "";
-        $table .= $_GET['name2'] . ";";
-        $table .= $_GET['number2'] . ";";
-        $table .= $_GET['date2'] . ";";
-        $table .= $_GET['tel2'] . ";";
-        $table .= PHP_EOL;
+        $host = 'localhost'; //имя хоста, на локальном компьютере это localhost
+        $user = 'root'; //имя пользователя, по умолчанию это root
+        $password = 'usbw'; //пароль, по умолчанию пустой
+        $db_name = 'test'; //имя базы данных
 
-        fwrite($form2File, $table);
-        flock($form2File, LOCK_UN); //СНЯТИЕ БЛОКИРОВКИ
-        fclose($form2File);
+        $link = mysqli_connect($host, $user, $password, $db_name);
+        mysqli_query($link, "SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
+        mysqli_query($link, "SET CHARACTER SET 'utf8'");
+        mysqli_set_charset($link, 'utf8');
+        
+        $name2 = $_GET['name2'];
+        $number2 = $_GET['number2'];
+        $date2 = $_GET['date2'];
+        $tel2 = $_GET['tel2'];
+
+        $query = "INSERT INTO receipt VALUES(NULL,'$name2', '$number2', '$date2', '$tel2')";
+        $result = mysqli_query($link, $query) or die(mysqli_error($link));
+        mysqli_close($link);
+
     } elseif (isset($_GET['form3Btn'])) {
-        $form3File = fopen("sale.txt", 'a') or die("Не удалось создать файл!");
-        flock($form3File, LOCK_EX); //БЛОКИРОВКА ФАЙЛА
 
-        $table = "";
+        $host = 'localhost'; //имя хоста, на локальном компьютере это localhost
+        $user = 'root'; //имя пользователя, по умолчанию это root
+        $password = 'usbw'; //пароль, по умолчанию пустой
+        $db_name = 'test'; //имя базы данных
+
+        $link = mysqli_connect($host, $user, $password, $db_name);
+        mysqli_query($link, "SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
+        mysqli_query($link, "SET CHARACTER SET 'utf8'");
+        mysqli_set_charset($link, 'utf8');
 
         $shoes = "";
         $i = 0;
@@ -115,17 +132,15 @@
             $i++;
         }
 
-        $table .= $shoes . ";";
-        $table .= $number . ";";
-        $table .= $_GET['date3'] . ";";
-        $table .= $_GET['email3'] . ";";
-        $table .= PHP_EOL;
+        $date3 = $_GET['date3'];
+        $email3 = $_GET['email3'];
 
-        fwrite($form3File, $table);
-        flock($form3File, LOCK_UN); //СНЯТИЕ БЛОКИРОВКИ
-        fclose($form3File);
+        $query = "INSERT INTO sale VALUES(NULL, '$shoes', '$number', '$date3', '$email3')";
+        $result = mysqli_query($link, $query) or die(mysqli_error($link));
+        mysqli_close($link);
+
     }
-    echo "<p class='added swing'>Данные успешно добавлены!</p>";
+    echo "<p class='added swing'>Данные успешно добавлены!</p><a class='viewBtn' href='view.php'>Просмотреть</a>";
     ?>
 
 </main>
