@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE HTML>
 
 <html lang="en">
@@ -9,7 +13,6 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/lab1.css">
     <link rel="stylesheet" href="../styles/lab2.css">
-    <link rel="stylesheet" href="../styles/lab3.css">
     <link rel="stylesheet" href="../styles/lab7.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
@@ -49,12 +52,54 @@
     <ul class="subMenu">
         <li><a href="add.php">ДОБАВИТЬ ДАННЫЕ</a></li>
         <li><a href="view.php">ПРОСМОТР ДАННЫХ</a></li>
-        <li><a href="sorting.php">СОРТИРОВКА ДАННЫХ</a></li>
+        <li class="active2"><a href="sorting.php">СОРТИРОВКА ДАННЫХ</a></li>
         <li><a href="search.php">ПОИСК ДАННЫХ</a></li>
     </ul>
 </nav>
 
 <main>
+
+    <div class="forms">
+        <form name="form1" action="" method="get">
+            <fieldset>
+                <label for="name1">АССОРТИМЕНТ</label>
+                <select id="name1" name="name1">
+                    <option value="name1">Наименование</option>
+                    <option value="manufacturer1">Производитель</option>
+                    <option value="site1">Сайт</option>
+                    <option value="date1">Дата выпуска</option>
+                    <option value="price1">Цена</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Сортировать" name="form1Btn">
+        </form>
+
+        <form name="form2" action="" method="get">
+            <fieldset>
+                <label for="name2">ПОСТУПЛЕНИЕ</label>
+                <select id="name2" name="name2">
+                    <option value="name2">Наименование</option>
+                    <option value="number2">Количество</option>
+                    <option value="date2">Дата поступления</option>
+                    <option value="tel2">Номер телефона</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Сортировать" name="form2Btn">
+        </form>
+
+        <form name="form3" action="" method="get">
+            <fieldset>
+                <label for="name3">ПРОДАЖА</label>
+                <select id="name3" name="name3">
+                    <option value="shoes">Наименование</option>
+                    <option value="number">Количество</option>
+                    <option value="date3">Дата продажи</option>
+                    <option value="email3">E-mail</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Сортировать" name="form3Btn">
+        </form>
+    </div>
 
     <?php
     if (isset($_GET['form1Btn'])) {
@@ -69,16 +114,33 @@
         mysqli_query($link, "SET CHARACTER SET 'utf8'");
         mysqli_set_charset($link, 'utf8');
 
-        $name1 = $_GET['name1'];
-        $manufacturer1 = $_GET['manufacturer1'];
-        $number = $_GET['site1'];
-        $date1 = $_GET['date1'];
-        $price1 = $_GET['price1'];
+        $table = 'rang';
+        $search = $_GET['name1'];
 
-        $query = "INSERT INTO rang VALUES(NULL, '$name1', '$manufacturer1', '$number','$date1', '$price1')";
-        $result = mysqli_query($link, $query) or die(mysqli_error($link));
+        $result = mysqli_query($link, "SELECT*FROM " . $table . " ORDER BY " . $search)
+        or die(mysqli_error($link));
+        $rows = mysqli_num_rows($result);
+
+        $table = "<table>";
+        $table .= "<caption>АССОРТИМЕНТ</caption>";
+        $table .= "<tr>";
+        $table .= "<th>Наименование</th>";
+        $table .= "<th>Производитель</th>";
+        $table .= "<th>Сайт</th>";
+        $table .= "<th>Дата выпуска</th>";
+        $table .= "<th>Цена</th>";
+        $table .= "</tr>";
+
+        for ($i = 0; $i < $rows; ++$i) {
+            $row = mysqli_fetch_row($result);
+            $table .= "<tr>";
+            for ($j = 1; $j < 6; ++$j) $table .= "<td>$row[$j]</td>";
+            $table .= "</tr>";
+        }
+        mysqli_free_result($result);
+        $table .= "</table> ";
+        echo $table;
         mysqli_close($link);
-
     } elseif (isset($_GET['form2Btn'])) {
 
         $host = 'localhost'; //имя хоста, на локальном компьютере это localhost
@@ -91,15 +153,32 @@
         mysqli_query($link, "SET CHARACTER SET 'utf8'");
         mysqli_set_charset($link, 'utf8');
 
-        $name2 = $_GET['name2'];
-        $number2 = $_GET['number2'];
-        $date2 = $_GET['date2'];
-        $tel2 = $_GET['tel2'];
+        $table = 'receipt';
+        $num = $_GET['name2'];
 
-        $query = "INSERT INTO receipt VALUES(NULL,'$name2', '$number2', '$date2', '$tel2')";
-        $result = mysqli_query($link, $query) or die(mysqli_error($link));
+        $result = mysqli_query($link, "SELECT*FROM " . $table . " Order By " . $num)
+        or die(mysqli_error($link));
+        $rows = mysqli_num_rows($result);
+
+        $table = "<table>";
+        $table .= "<caption>ПОСТУПЛЕНИЕ</caption>";
+        $table .= "<tr>";
+        $table .= "<th>Наименование</th>";
+        $table .= "<th>Количество</th>";
+        $table .= "<th>Дата поступления</th>";
+        $table .= "<th>Номер телефона</th>";
+        $table .= "</tr>";
+
+        for ($i = 0; $i < $rows; ++$i) {
+            $row = mysqli_fetch_row($result);
+            $table .= "<tr>";
+            for ($j = 1; $j < 5; ++$j) $table .= "<td>$row[$j]</td>";
+            $table .= "</tr>";
+        }
+        mysqli_free_result($result);
+        $table .= "</table> ";
+        echo $table;
         mysqli_close($link);
-
     } elseif (isset($_GET['form3Btn'])) {
 
         $host = 'localhost'; //имя хоста, на локальном компьютере это localhost
@@ -112,35 +191,34 @@
         mysqli_query($link, "SET CHARACTER SET 'utf8'");
         mysqli_set_charset($link, 'utf8');
 
-        $shoes = "";
-        $i = 0;
-        foreach ($_GET['shoes'] as $value) {
-            if ($i == 0)
-                $shoes .= $value;
-            else
-                $shoes .= ", " . $value;
-            $i++;
+        $table = 'sale';
+        $num = $_GET['name3'];
+
+
+        $result = mysqli_query($link, "SELECT*FROM " . $table . " order by " . $num)
+        or die(mysqli_error($link));
+        $rows = mysqli_num_rows($result);
+
+        $table = "<table>";
+        $table .= "<caption>ПРОДАЖА</caption>";
+        $table .= "<tr>";
+        $table .= "<th>Наименование</th>";
+        $table .= "<th>Количество</th>";
+        $table .= "<th>Дата продажи</th>";
+        $table .= "<th>E-mail</th>";
+        $table .= "</tr>";
+
+        for ($i = 0; $i < $rows; ++$i) {
+            $row = mysqli_fetch_row($result);
+            $table .= "<tr>";
+            for ($j = 1; $j < 5; ++$j) $table .= "<td>$row[$j]</td>";
+            $table .= "</tr>";
         }
-
-        $number = "";
-        $i = 0;
-        foreach ($_GET['number'] as $value) {
-            if ($i == 0)
-                $number .= $value;
-            else
-                $number .= ", " . $value;
-            $i++;
-        }
-
-        $date3 = $_GET['date3'];
-        $email3 = $_GET['email3'];
-
-        $query = "INSERT INTO sale VALUES(NULL, '$shoes', '$number', '$date3', '$email3')";
-        $result = mysqli_query($link, $query) or die(mysqli_error($link));
+        mysqli_free_result($result);
+        $table .= "</table> ";
+        echo $table;
         mysqli_close($link);
-
     }
-    echo "<p class='added swing'>Данные успешно добавлены!</p><a class='viewBtn' href='view.php'>Просмотреть</a>";
     ?>
 
 </main>
