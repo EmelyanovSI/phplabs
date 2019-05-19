@@ -1,0 +1,145 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.4.2
+-- http://www.phpmyadmin.net
+--
+-- Хост: localhost
+-- Время создания: Май 19 2019 г., 05:54
+-- Версия сервера: 5.6.13
+-- Версия PHP: 5.4.17
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- База данных: `test`
+--
+CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `test`;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hotel`
+--
+
+CREATE TABLE IF NOT EXISTS `hotel` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `doc` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `nomer` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `udobstva` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `pol` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+
+--
+-- Дамп данных таблицы `hotel`
+--
+
+INSERT INTO `hotel` (`id`, `name`, `doc`, `nomer`, `udobstva`, `pol`) VALUES
+(1, 'Сергей', 'Оплачено', 'Одноместный', 'Интернет', 'Мужской'),
+(2, 'Сергей', 'Оплачено', 'Одноместный', 'Интернет', 'Мужской'),
+(7, 'Иванов Иван ', 'Анкета ', 'Одноместный', '', 'Мужской '),
+(8, 'Иванов Иван ', 'Анкета ', 'Одноместный', 'Интернет ', 'Мужской '),
+(9, 'Иванов Иван ', 'Анкета Паспорт ', 'Четырехместный', 'Кондиционер Телевизор Сейф Интернет ', 'Мужской '),
+(10, 'Иванов Иван ', 'Анкета ', 'Одноместный', 'Интернет ', 'Мужской Мужской '),
+(11, 'Иванов Иван ', 'Анкета ', 'Одноместный', 'Интернет ', 'Мужской Мужской '),
+(12, '', '', '', '', ''),
+(13, '', '', '', '', ''),
+(14, 'аванов', 'рпувкр', 'вакрувр', 'курфукр', 'вкарукр'),
+(15, 'аванов', 'рпувкр', 'вакрувр', 'курфукр', 'вкарукр'),
+(16, 'жванов', 'укргыу', 'егрфукер', 'уеруер', 'уеруеруе'),
+(17, 'жванов', 'укргыу', 'егрфукер', 'уеруер', 'уеруеруе'),
+(18, 'яванов', 'цепукпн', 'укпнук', 'укукук', 'укрпуцкпр'),
+(19, 'яванов', 'цепукпн', 'укпнук', 'укукук', 'укрпуцкпр'),
+(20, 'Иванов Иван ', 'Анкета Паспорт ', 'Двуместный', 'Кондиционер Телевизор Сейф Интернет ', 'Мужской '),
+(21, 'Иванов Иван ', 'Анкета Паспорт ', 'Трехместный', 'Кондиционер Телевизор Сейф Интернет ', 'Мужской Мужской ');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `rang`
+--
+
+CREATE TABLE IF NOT EXISTS `rang` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name1` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `manufacturer1` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `site1` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `date1` date DEFAULT NULL,
+  `price1` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп данных таблицы `rang`
+--
+
+INSERT INTO `rang` (`id`, `name1`, `manufacturer1`, `site1`, `date1`, `price1`) VALUES
+(1, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-17', 1000),
+(2, 'Туфли', 'Nike', 'http://bukinshoes.ru', '2019-05-18', 1000),
+(3, 'Кросы', 'Adidas', 'http://bukinshoes.ru', '2019-05-18', 5000),
+(4, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-09', 5000);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `receipt`
+--
+
+CREATE TABLE IF NOT EXISTS `receipt` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name2` varchar(255) DEFAULT NULL,
+  `number2` int(11) unsigned DEFAULT NULL,
+  `date2` date DEFAULT NULL,
+  `tel2` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Дамп данных таблицы `receipt`
+--
+
+INSERT INTO `receipt` (`id`, `name2`, `number2`, `date2`, `tel2`) VALUES
+(1, 'Туфли', 1, '2019-03-17', '80447807658'),
+(2, 'Кроссовки', 2, '2019-03-18', '80447807658'),
+(3, 'Туфли', 1, '2019-03-17', '80447807658'),
+(4, 'Кроссовки', 2, '2019-03-18', '80447807658'),
+(5, 'Туфли', 1, '2019-05-17', '80447807658'),
+(6, 'Шлепки', 4, '2019-05-22', '80447807658');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `sale`
+--
+
+CREATE TABLE IF NOT EXISTS `sale` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `shoes` varchar(255) DEFAULT NULL,
+  `number` int(11) unsigned DEFAULT NULL,
+  `date3` date DEFAULT NULL,
+  `email3` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Дамп данных таблицы `sale`
+--
+
+INSERT INTO `sale` (`id`, `shoes`, `number`, `date3`, `email3`) VALUES
+(1, 'Туфли, Кроссовки, Тапки, Ботинки, Кроксы, Шлепки', 1, '2019-03-17', 'emelyanov@gmail.com'),
+(2, 'Кроксы', 4, '2019-03-18', 'emelyanov@gmail.com'),
+(3, 'Туфли, Кроссовки, Тапки, Ботинки, Кроксы, Шлепки', 1, '2019-03-17', 'emelyanov@gmail.com'),
+(4, 'Кроксы', 4, '2019-03-18', 'emelyanov@gmail.com'),
+(5, 'Кроксы', 6, '2019-05-29', 'emelyanov@gmail.com');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -5,7 +5,7 @@
 <head>
     <title>phpKr1</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -83,9 +83,6 @@
             </a>
         </span>
 </footer>
-
-<script src="scripts/jquery-3.4.0.js" type="text/javascript" language="JavaScript"></script>
-<script src="scripts/script.js" type="text/javascript" language="JavaScript"></script>
 
 </body>
 </html>

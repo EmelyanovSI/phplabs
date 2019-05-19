@@ -163,14 +163,6 @@ footer a:active {
 	background: white;
 }
 /***************************/
-/*********navigation********/
-nav {
-	transition: none;
-	position: fixed;
-	width: 100%;
-	z-index: 1000;
-}
-/***************************/
 
 .forms {
 	background: #2f3640;

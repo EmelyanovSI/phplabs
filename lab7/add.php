@@ -55,6 +55,7 @@ session_start();
         <li><a href="view.php">ПРОСМОТР ДАННЫХ</a></li>
         <li><a href="sorting.php">СОРТИРОВКА ДАННЫХ</a></li>
         <li><a href="search.php">ПОИСК ДАННЫХ</a></li>
+        <li><a href="sql.php">ЗАПРОСЫ</a></li>
     </ul>
 </nav>
 
