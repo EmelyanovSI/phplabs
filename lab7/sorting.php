@@ -36,13 +36,13 @@ session_start();
     <nav class="navHeader">
         <ul class="mainMenu">
             <li><a href="../lab1/form1.php">Form</a></li>
-            <li><a href="add.php">Text file</a></li>
+            <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/add.php">Authorization</a></li>
             <li class="active"><a href="add.php">Database</a></li>
-            <li><a href="../lab8/lab8.php">Registration and database</a></li>
+            <li><a href="../lab8/add.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -118,7 +118,7 @@ session_start();
         $table = 'rang';
         $search = $_GET['name1'];
 
-        $result = mysqli_query($link, "SELECT*FROM " . $table . " ORDER BY " . $search)
+        $result = mysqli_query($link, "SELECT * FROM " . $table . " ORDER BY " . $search)
         or die(mysqli_error($link));
         $rows = mysqli_num_rows($result);
 
@@ -157,7 +157,7 @@ session_start();
         $table = 'receipt';
         $num = $_GET['name2'];
 
-        $result = mysqli_query($link, "SELECT*FROM " . $table . " Order By " . $num)
+        $result = mysqli_query($link, "SELECT * FROM " . $table . " ORDER BY " . $num)
         or die(mysqli_error($link));
         $rows = mysqli_num_rows($result);
 
@@ -196,7 +196,7 @@ session_start();
         $num = $_GET['name3'];
 
 
-        $result = mysqli_query($link, "SELECT*FROM " . $table . " order by " . $num)
+        $result = mysqli_query($link, "SELECT * FROM " . $table . " ORDER BY " . $num)
         or die(mysqli_error($link));
         $rows = mysqli_num_rows($result);
 
@@ -216,7 +216,7 @@ session_start();
             $table .= "</tr>";
         }
         mysqli_free_result($result);
-        $table .= "</table> ";
+        $table .= "</table>";
         echo $table;
         mysqli_close($link);
     }

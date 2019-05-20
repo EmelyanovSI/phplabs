@@ -47,7 +47,7 @@ if (isset($_SESSION['test']['fifth']))
             <li><a href="../../lab5/regular.html">Regular</a></li>
             <li><a href="../../lab6/add.php">Authorization</a></li>
             <li><a href="../../lab7/add.php">Database</a></li>
-            <li><a href="../../lab8/lab8.php">Registration and database</a></li>
+            <li><a href="../../lab8/add.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>

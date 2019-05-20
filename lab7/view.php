@@ -32,13 +32,13 @@
     <nav class="navHeader">
         <ul class="mainMenu">
             <li><a href="../lab1/form1.php">Form</a></li>
-            <li><a href="add.php">Text file</a></li>
+            <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/add.php">Authorization</a></li>
             <li class="active"><a href="add.php">Database</a></li>
-            <li><a href="../lab8/lab8.php">Registration and database</a></li>
+            <li><a href="../lab8/add.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -69,7 +69,7 @@
     mysqli_set_charset($link, 'utf8');
 
     $table = 'rang'; //задаем имя таблицы в переменной
-    $result = mysqli_query($link, "SELECT*FROM " . $table . " WHERE id>0") or die(mysqli_error($link));
+    $result = mysqli_query($link, "SELECT * FROM " . $table . " WHERE id > 0") or die(mysqli_error($link));
 
     $table = "<table>";
     $table .= "<caption>АССОРТИМЕНТ</caption>";
@@ -93,7 +93,7 @@
     echo $table;
 
     $table = 'receipt';
-    $result = mysqli_query($link, "SELECT*FROM " . $table . " WHERE id>0") or die(mysqli_error($link));
+    $result = mysqli_query($link, "SELECT * FROM " . $table . " WHERE id > 0") or die(mysqli_error($link));
 
     $table = "<table>";
     $table .= "<caption>ПОСТУПЛЕНИЕ</caption>";
@@ -112,11 +112,11 @@
         $table .= "</tr>";
     }
     mysqli_free_result($result);
-    $table .= "</table> ";
+    $table .= "</table>";
     echo $table;
 
     $table = 'sale';
-    $result = mysqli_query($link, "SELECT*FROM " . $table . " WHERE id>0") or die(mysqli_error($link));
+    $result = mysqli_query($link, "SELECT * FROM " . $table . " WHERE id > 0") or die(mysqli_error($link));
 
     $table = "<table>";
     $table .= "<caption>ПРОДАЖА</caption>";
@@ -135,7 +135,7 @@
         $table .= "</tr>";
     }
     mysqli_free_result($result);
-    $table .= "</table> ";
+    $table .= "</table>";
     echo $table;
 
     mysqli_close($link);

@@ -33,13 +33,13 @@
     <nav class="navHeader">
         <ul class="mainMenu">
             <li><a href="../lab1/form1.php">Form</a></li>
-            <li><a href="add.php">Text file</a></li>
+            <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/add.php">Authorization</a></li>
             <li class="active"><a href="add.php">Database</a></li>
-            <li><a href="../lab8/lab8.php">Registration and database</a></li>
+            <li><a href="../lab8/add.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -62,37 +62,18 @@
             <fieldset>
                 <legend>Запросы</legend>
 
+                <label for="sql">Запросы</label>
                 <select id="sql" name="sql">
-                    <option value="Select * from receipt WHERE name2='Шлепки'">
-                        Все шлепки
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
-                    <option value="">
-
-                    </option>
+                    <option value="SELECT * FROM receipt WHERE name2 = 'Шлепки' LIMIT 1">Шлепки</option>
+                    <option value="SELECT shoes, COUNT(id) AS kol FROM sale GROUP BY number">Заказано</option>
+                    <option value="SELECT * FROM rang WHERE price1 BETWEEN 4000 AND 5000">Цена от 4000 до 5000</option>
+                    <option value="SELECT name2, COUNT(id) FROM receipt GROUP BY number2 HAVING COUNT(id) > 0">В наличии</option>
+                    <option value="SELECT * FROM receipt WHERE tel2 LIKE '80%'">Телефон с 80...</option>
+                    <option value="SELECT * FROM sale ORDER BY number">Продажа по количеству</option>
+                    <option value="SELECT * FROM receipt WHERE date2 IN ('2019-03-17')">Состояние на 2019-03-17</option>
+                    <option value="SELECT MAX(price1) FROM rang">Максимальная цена</option>
+                    <option value="SELECT MIN(price1) FROM rang">Минимальная цена</option>
+                    <option value="UPDATE rang SET price1 = price1 * 1.1">Поднять цену на 10%</option>
                 </select>
             </fieldset>
             <input type="submit" value="Выполнить" name="submit">
@@ -100,7 +81,35 @@
     </div>
 
     <?php
+    if (!empty($_GET) and isset($_GET['sql'])) {
 
+        $host = 'localhost'; //имя хоста, на локальном компьютере это localhost
+        $user = 'root'; //имя пользователя, по умолчанию это root
+        $password = 'usbw'; //пароль, по умолчанию пустой
+        $db_name = 'test'; //имя базы данных
+
+        $link = mysqli_connect($host, $user, $password, $db_name);
+        mysqli_query($link, "SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
+        mysqli_query($link, "SET CHARACTER SET 'utf8'");
+        mysqli_set_charset($link, 'utf8');
+
+        $query = $_GET['sql'];
+        $result = mysqli_query($link, $query) or die(mysqli_error($link));
+        if ($query != 'UPDATE rang SET price1 = price1 * 1.1') {
+            $table = "<table>";
+            $table .= "<caption>Результат</caption>";
+            $rows = mysqli_num_rows($result);
+            for ($i = 0; $i < $rows; ++$i) {
+                $row = mysqli_fetch_row($result);
+                $table .= "<tr>";
+                for ($j = 0; $j < count($row); ++$j) $table .= "<td>$row[$j]</td>";
+                $table .= "</tr>";
+            }
+            mysqli_free_result($result);
+            $table .= "</table>";
+            echo $table;
+        }
+    }
     ?>
 
 </main>

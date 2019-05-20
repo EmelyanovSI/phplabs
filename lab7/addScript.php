@@ -33,13 +33,13 @@
     <nav class="navHeader">
         <ul class="mainMenu">
             <li><a href="../lab1/form1.php">Form</a></li>
-            <li><a href="add.php">Text file</a></li>
+            <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/add.php">Authorization</a></li>
             <li class="active"><a href="add.php">Database</a></li>
-            <li><a href="../lab8/lab8.php">Registration and database</a></li>
+            <li><a href="../lab8/add.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -97,7 +97,7 @@
         $date2 = $_GET['date2'];
         $tel2 = $_GET['tel2'];
 
-        $query = "INSERT INTO receipt VALUES(NULL,'$name2', '$number2', '$date2', '$tel2')";
+        $query = "INSERT INTO receipt VALUES(NULL, '$name2', '$number2', '$date2', '$tel2')";
         $result = mysqli_query($link, $query) or die(mysqli_error($link));
         mysqli_close($link);
 

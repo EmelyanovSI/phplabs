@@ -36,13 +36,13 @@ session_start();
     <nav class="navHeader">
         <ul class="mainMenu">
             <li><a href="../lab1/form1.php">Form</a></li>
-            <li><a href="add.php">Text file</a></li>
+            <li><a href="../lab2/add.php">Text file</a></li>
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
             <li><a href="../lab6/add.php">Authorization</a></li>
             <li class="active"><a href="add.php">Database</a></li>
-            <li><a href="../lab8/lab8.php">Registration and database</a></li>
+            <li><a href="../lab8/add.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -122,9 +122,9 @@ session_start();
 
         $table = 'rang';
         $num = $_GET['name1'];
-        $srch = $_GET['search1'];
+        $search = $_GET['search1'];
 
-        $result = mysqli_query($link, "SELECT*FROM " . $table . " WHERE " . $num . "='" . $srch . "'")
+        $result = mysqli_query($link, "SELECT * FROM " . $table . " WHERE " . $num . "='" . $search . "'")
         or die(mysqli_error($link));
         $rows = mysqli_num_rows($result);
 
@@ -166,9 +166,9 @@ session_start();
 
         $table = 'receipt';
         $num = $_GET['name2'];
-        $srch = $_GET['search2'];
+        $search = $_GET['search2'];
 
-        $result = mysqli_query($link, "SELECT*FROM " . $table . " WHERE " . $num . "='" . $srch . "'")
+        $result = mysqli_query($link, "SELECT * FROM " . $table . " WHERE " . $num . "='" . $search . "'")
         or die(mysqli_error($link));
         $rows = mysqli_num_rows($result);
 
@@ -209,9 +209,9 @@ session_start();
 
         $table = 'sale';
         $num = $_GET['name3'];
-        $srch = $_GET['search3'];
+        $search = $_GET['search3'];
 
-        $result = mysqli_query($link, "SELECT*FROM " . $table . " WHERE " . $num . "='" . $srch . "'")
+        $result = mysqli_query($link, "SELECT * FROM " . $table . " WHERE " . $num . "='" . $search . "'")
         or die(mysqli_error($link));
         $rows = mysqli_num_rows($result);
         if ($rows > 0) {
@@ -231,7 +231,7 @@ session_start();
                 $table .= "</tr>";
             }
             mysqli_free_result($result);
-            $table .= "</table> ";
+            $table .= "</table>";
             echo $table;
         } else echo $notFind;
         mysqli_close($link);

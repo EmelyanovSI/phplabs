@@ -7,13 +7,16 @@ session_start();
 <html lang="en">
 
 <head>
-    <title>phpLab6</title>
+    <title>phpLab8</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/lab1.css">
     <link rel="stylesheet" href="../styles/lab2.css">
+    <link rel="stylesheet" href="../styles/lab3.css">
     <link rel="stylesheet" href="../styles/lab6.css">
+    <link rel="stylesheet" href="../styles/lab7.css">
+    <link rel="stylesheet" href="../styles/lab8.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossorigin="anonymous">
@@ -29,7 +32,8 @@ session_start();
         </div>
         <form id="searchBox" action="" method="get">
             <input id="searchText" type="search" name="searchText" placeholder="Search for labs!" autofocus>
-            <button id="searchBtn" type="button" value="search"><i class="fas fa-search"></i></button>
+            <button id="searchBtn" type="submit" value="search"><i class="fas fa-search"></i></button>
+            <input id="search" name="search" type="hidden" value="search">
         </form>
         <?php include('logButton.php'); ?>
     </div>
@@ -40,9 +44,9 @@ session_start();
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
-            <li class="active"><a href="add.php">Authorization</a></li>
+            <li><a href="../lab6/add.php">Authorization</a></li>
             <li><a href="../lab7/add.php">Database</a></li>
-            <li><a href="../lab8/add.php">Registration and database</a></li>
+            <li class="active"><a href="add.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -181,8 +185,7 @@ session_start();
             </form>
         </div>
 
-        <?php
-    } else echo '<p class="notFind swing">Войдите на сайт с правами администратора для добавления данных.</p>';
+    <?php } else echo '<p class="notFind">Войдите на сайт с правами администратора для добавления данных.</p>';
     ?>
 
 </main>

@@ -1,35 +1,46 @@
 <?php
-
-function user_exists()
+function user_exists($login, $mypassword)
 {
-    $authfile = fopen('auth.txt', 'r');
-    while (!feof($authfile)) {
-        $entry = fgets($authfile);
-        if (!empty($entry)) {
-            $attr = explode(';', $entry);
-            $login = $attr[0];
-            $password = $attr[2];
-            if ($login == $_POST['login'] and md5($_POST['password']) == $password) {
-                fclose($authfile);
-                return $attr[3];
-            }
-        }
+    $host = 'localhost'; //имя хоста, на локальном компьютере это localhost
+    $user = 'root'; //имя пользователя, по умолчанию это root
+    $password = 'usbw'; //пароль, по умолчанию пустой
+    $db_name = 'test'; //имя базы данных
+
+    $link = mysqli_connect($host, $user, $password, $db_name);
+    mysqli_query($link, "SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
+    mysqli_query($link, "SET CHARACTER SET 'utf8'");
+    mysqli_set_charset($link, 'utf8');
+
+    $mypassword = md5($mypassword . "MyUniqueSault");
+
+    $result = mysqli_query($link, "SELECT * FROM users WHERE login='$login' AND password='$mypassword'")
+    or die(mysqli_error($link));
+    $rows = mysqli_num_rows($result);
+
+    mysqli_close($link);
+    if ($rows > 0) {
+        $row = mysqli_fetch_row($result);
+        mysqli_free_result($result);
+
+        return $row;
     }
-    fclose($authfile);
+    mysqli_free_result($result);
     return -1;
 }
 
-
-$logError = true;
+$logError = false;
 if (!empty($_POST)) {
-    $logRes = user_exists();
+    $logRes = user_exists($_POST['login'], $_POST['mypassword']);
     if ($logRes != -1) {
-        $logError = false;
         session_start();
         $_SESSION['auth']['success'] = true;
-        $_SESSION['auth']['login'] = $_POST['login'];
-        $_SESSION['auth']['rights'] = $logRes;
-        header("Location: http://localhost:63342/phplabs/lab6/add.php");
+        $nm = $_POST['login'];
+        if ($logRes[7] == 0) $nm .= ' (' . $logRes[3] . ' ' . $logRes[4] . ')';
+        $_SESSION['auth']['id'] = $logRes[0];
+        $_SESSION['auth']['login'] = $nm;
+        $_SESSION['auth']['rights'] = $logRes[7];
+        setcookie('attend', time(), time() + 60 * 60 * 24 * 7);
+        header("Location: http://localhost:63342/phplabs/lab8/view.php");
         exit;
     } else $logError = true;
 }
@@ -40,15 +51,16 @@ if (!empty($_POST)) {
 <html lang="en">
 
 <head>
-    <title>phpLab6</title>
+    <title>phpLab8</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/lab1.css">
     <link rel="stylesheet" href="../styles/lab2.css">
     <link rel="stylesheet" href="../styles/lab3.css">
-    <link rel="stylesheet" href="../styles/lab4.css">
     <link rel="stylesheet" href="../styles/lab6.css">
+    <link rel="stylesheet" href="../styles/lab7.css">
+    <link rel="stylesheet" href="../styles/lab8.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossorigin="anonymous">
@@ -75,9 +87,9 @@ if (!empty($_POST)) {
             <li><a href="../lab3/cookies.php">Cookies</a></li>
             <li><a href="../lab4/shop.php">Session</a></li>
             <li><a href="../lab5/regular.html">Regular</a></li>
-            <li class="active"><a href="add.php">Authorization</a></li>
+            <li><a href="../lab6/add.php">Authorization</a></li>
             <li><a href="../lab7/add.php">Database</a></li>
-            <li><a href="../lab8/add.php">Registration and database</a></li>
+            <li class="active"><a href="add.php">Registration and database</a></li>
         </ul>
     </nav>
 </header>
@@ -95,7 +107,7 @@ if (!empty($_POST)) {
 <main>
 
     <div class="forms">
-        <form name="logForm" action="loginScript.php" method="POST">
+        <form name="logForm" action="login.php" method="POST">
             <?php
             if (!empty($_POST) and $logError) echo '<p class="notFind">Неверный логин и/или пароль!</p>';
             ?>
