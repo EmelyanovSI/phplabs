@@ -162,7 +162,7 @@ if (!empty($_POST)) {
         <form name="form1" action="" method="POST" novalidate>
             <?php
             if (!empty($_POST) and $error)
-                echo '<p class="notFind">' . $error . '</p>';
+                echo $error;
             ?>
             <fieldset>
                 <legend>Регистрация</legend>
@@ -171,7 +171,7 @@ if (!empty($_POST)) {
                 <input type="text" id="login" name="login" required value='<?php echo $login; ?>'>
 
                 <label for="password">Пароль</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
 
                 <label for="name">Имя</label>
                 <input type="text" id="name" name="name" required value='<?php echo $name; ?>'>

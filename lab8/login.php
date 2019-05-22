@@ -117,8 +117,8 @@ if (!empty($_POST)) {
                 <label for="login">Логин</label>
                 <input type="text" name="login" placeholder="login" required>
 
-                <label for="password">Пароль №1</label>
-                <input type="password" name="password" placeholder="password" required>
+                <label for="password">Пароль</label>
+                <input type="password" name="mypassword" placeholder="password" required>
             </fieldset>
 
             <input type="submit" value="Войти">

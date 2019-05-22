@@ -172,7 +172,6 @@ if (!empty($_POST)) {
         mysqli_query($link, "SET CHARACTER SET 'utf8'");
         mysqli_set_charset($link, 'utf8');
 
-
         $id = $_GET['id'];
         $result = mysqli_query($link, "SELECT * FROM users WHERE id=$id") or die(mysqli_error($link));
         $rows = mysqli_num_rows($result);
@@ -183,8 +182,8 @@ if (!empty($_POST)) {
         }
         ?>
 
-        <h1 align="center">Профиль пользователя </h1>
-        <h3 align="center">Последний вход на сайт
+        <p class="added">Профиль пользователя</p>
+        <p class="added">Последний вход на сайт
 
             <?php
             date_default_timezone_set("UTC");
@@ -205,7 +204,7 @@ if (!empty($_POST)) {
             }
             ?>
 
-        </h3>
+        </p>
 
         <?php
         $user = get_user($_SESSION['auth']['id']);
@@ -234,13 +233,13 @@ if (!empty($_POST)) {
                         <legend>Изменение профиля</legend>
 
                         <label for="login">Логин</label>
-                        <input type="text" id="login" name="login" required value='<?php echo $row[1]; ?>'>
+                        <input type="text" id="login" name="login" value='<?php echo $row[1]; ?>'>
 
                         <label for="name">Имя</label>
-                        <input type="text" id="name" name="name" required value='<?php echo $row[3]; ?>'>
+                        <input type="text" id="name" name="name" value='<?php echo $row[3]; ?>'>
 
                         <label for="secname">Фамилия</label>
-                        <input type="text" id="secname" name="secname" required value='<?php echo $row[4]; ?>'>
+                        <input type="text" id="secname" name="secname" value='<?php echo $row[4]; ?>'>
 
                         <label for="age">Возраст</label>
                         <input type="number" id="age" name="age" min="1" value='<?php echo $row[5]; ?>'>

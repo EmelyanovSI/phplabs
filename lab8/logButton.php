@@ -5,8 +5,8 @@ if (isset($_SESSION['auth']) and $_SESSION['auth']['success']) {
 
     echo '<div class="login">
             <div class="user">
-		        <p>' . $_SESSION["auth"]["login"] . '</p>
-		        <p>' . $str . '</p>
+		        <p><a href="' . $page . '">' . $_SESSION["auth"]["login"] . '</a></p>
+		        <p><a href="' . $page . '">' . $str . '</a></p>
 	        </div>
 	        <a class="logoutBtn" href="logout.php">Выйти</a>
           </div>';

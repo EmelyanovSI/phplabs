@@ -1,3 +1,39 @@
 .loginBtn {
     margin: 2px;
 }
+
+.user {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.user p {
+    margin: 2px;
+    padding: 2px;
+    background: #2f3640;
+    border: 2px solid #2f3640;
+    border-radius: 10px;
+}
+
+.user p a {
+    color: white;
+}
+
+.user:hover > p {
+    background: white;
+    box-shadow: 1px 1px 5px #999;
+}
+
+.user:hover > p a {
+    color: #2f3640;
+    font-weight: bold;
+}
+
+.user:active > p {
+    background: #50fc5c;
+}
+
+.user:active > p a {
+    color: #2f3640;
+    font-weight: bold;
+}

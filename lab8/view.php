@@ -20,7 +20,6 @@ function get_user($id)
     mysqli_free_result($result);
     return $row;
 }
-
 ?>
 
 <!DOCTYPE HTML>

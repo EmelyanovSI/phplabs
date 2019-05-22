@@ -138,7 +138,7 @@ if (!empty($_GET)) {
         $result = mysqli_query($link, "SELECT id, login, name, secname, age, email, rights, blockdate FROM "
             . $table . " WHERE id > 0") or die(mysqli_error($link));
 
-        $table = "<table border=3>";
+        $table = "<table>";
         $table .= "<caption>Список пользователей</caption>";
         $table .= "<tr>";
         $table .= "<th>Логин</th>";
@@ -203,7 +203,7 @@ if (!empty($_GET)) {
             $table .= "</tr>";
         }
         mysqli_free_result($result);
-        $table .= "</table> ";
+        $table .= "</table>";
         echo $table;
 
         $table = 'users';
@@ -220,7 +220,7 @@ if (!empty($_GET)) {
         mysqli_free_result($result);
         ?>
 
-        <p class="added">Статистика пользователей</p>
+        <p class="added swing">Статистика пользователей</p>
         <p class="added swing">Всего пользователей: <?php echo $rows; ?></p>
         <p class="added swing">Администраторов: <?php echo $admins; ?></p>
         <p class="notFind swing">Забаненных пользователей: <?php echo $banned; ?></p>
