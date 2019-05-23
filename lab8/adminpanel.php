@@ -173,15 +173,17 @@ if (!empty($_GET)) {
                 $table .= "<td class='notFind'>Заблокирован, ост. $dif</td>";
 
                 $ck3 = "alert(\"Разблокировать?\")";
-                $unban .= "<a href='?unban=$row[0]' onclick='" . $ck3 . "'>Разблокировать</a>";
+                $unban .= "<a class='viewBtn' href='?unban=$row[0]' onclick='" . $ck3 . "'>Разблокировать</a>";
             } else {
                 $table .= "<td class='added'>Не заблокирован</td>";
             }
             $unban .= "</td>";
-            $ck1 = "alert(\"Забанить?\"); document.getElementById(\"frm\").submit(); return false;";
+            $ck1 = "alert(\"Забанить?\"); document.getElementById(\"frm" . $row[0] . "\").submit(); return false;";
 
             $table .= "<td>";
-            $table .= "<form name='frm' id='frm'>";
+            $table .= "<div class='forms'>";
+            $table .= "<form name='frm" . $row[0] . "' id='frm" . $row[0] . "'>";
+            $table .= "<fieldset>";
             $table .= "<select name='tm'>";
             $table .= "<option value='60'>Минута</option>";
             $table .= "<option value='3600'>Час</option>";
@@ -190,16 +192,20 @@ if (!empty($_GET)) {
             $table .= "<option value='2419200'>Месяц</option>";
             $table .= "</select>";
             $table .= "<input type='hidden' value='$row[0]' name='ban'>";
+            $table .= "</fieldset>";
             $table .= "</form>";
-            $table .= "<a href='#' onclick='" . $ck1 . "'>Забанить</a>";
+            $table .= "<a class='viewBtn' href='#' onclick='" . $ck1 . "'>Забанить</a>";
+            $table .= "</div>";
             $table .= "</td>";
 
-            $table .= $unban;
             $ck2 = "alert(\"Удалить?\")";
 
             $table .= "<td>";
-            $table .= "<a href='?del=$row[0]' onclick='" . $ck2 . "'>Удалить</a>";
+            $table .= "<a class='notFind' href='?del=$row[0]' onclick='" . $ck2 . "'>Удалить</a>";
             $table .= "</td>";
+
+            $table .= $unban;
+
             $table .= "</tr>";
         }
         mysqli_free_result($result);

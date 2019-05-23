@@ -22,6 +22,7 @@
 .user:hover > p {
     background: white;
     box-shadow: 1px 1px 5px #999;
+    border-radius: 5px;
 }
 
 .user:hover > p a {
@@ -36,4 +37,40 @@
 .user:active > p a {
     color: #2f3640;
     font-weight: bold;
+}
+
+td.added {
+    font-size: 1em;
+    padding: 10px;
+}
+
+td * {
+    padding: 0;
+    margin: 0;
+}
+
+td .forms form {
+    padding: 0;
+    margin: 0;
+}
+
+td select {
+    width: 100px;
+}
+
+td form {
+    border: none;
+}
+
+td .viewBtn {
+    background: #ddffcc;
+}
+
+td .notFind {
+    margin: 0;
+}
+
+td .notFind:hover {
+    background: #fc505c;
+    color: white;
 }
