@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 19 2019 г., 05:54
+-- Время создания: Май 23 2019 г., 12:05
 -- Версия сервера: 5.6.13
 -- Версия PHP: 5.4.17
 
@@ -41,10 +41,10 @@ CREATE TABLE IF NOT EXISTS `rang` (
 --
 
 INSERT INTO `rang` (`id`, `name1`, `manufacturer1`, `site1`, `date1`, `price1`) VALUES
-(1, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-17', 1000),
-(2, 'Туфли', 'Nike', 'http://bukinshoes.ru', '2019-05-18', 1000),
-(3, 'Кросы', 'Adidas', 'http://bukinshoes.ru', '2019-05-18', 5000),
-(4, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-09', 5000);
+(1, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-17', 1210),
+(2, 'Туфли', 'Nike', 'http://bukinshoes.ru', '2019-05-18', 1210),
+(3, 'Кросы', 'Adidas', 'http://bukinshoes.ru', '2019-05-18', 6050),
+(4, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-09', 6050);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

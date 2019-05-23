@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 19 2019 г., 05:54
+-- Время создания: Май 23 2019 г., 12:05
 -- Версия сервера: 5.6.13
 -- Версия PHP: 5.4.17
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `hotel` (
   `udobstva` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `pol` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Дамп данных таблицы `hotel`
@@ -59,7 +59,16 @@ INSERT INTO `hotel` (`id`, `name`, `doc`, `nomer`, `udobstva`, `pol`) VALUES
 (18, 'яванов', 'цепукпн', 'укпнук', 'укукук', 'укрпуцкпр'),
 (19, 'яванов', 'цепукпн', 'укпнук', 'укукук', 'укрпуцкпр'),
 (20, 'Иванов Иван ', 'Анкета Паспорт ', 'Двуместный', 'Кондиционер Телевизор Сейф Интернет ', 'Мужской '),
-(21, 'Иванов Иван ', 'Анкета Паспорт ', 'Трехместный', 'Кондиционер Телевизор Сейф Интернет ', 'Мужской Мужской ');
+(21, 'Иванов Иван ', 'Анкета Паспорт ', 'Трехместный', 'Кондиционер Телевизор Сейф Интернет ', 'Мужской Мужской '),
+(22, 'Емельянов Сергей ', 'Анкета ', 'Одноместный', '', 'Мужской '),
+(23, 'Емельянов Сергей ', 'Анкета ', 'Одноместный', '', 'Мужской '),
+(24, 'Иванов Сергей ', 'Анкета Паспорт ', 'Двуместный', 'Кондиционер Телевизор Сейф Интернет ', 'Мужской '),
+(25, 'Емельянов Сергей ', 'Анкета ', 'Одноместный', '', 'Мужской '),
+(26, 'Емельянов Сергей ', 'Анкета ', 'Одноместный', '', 'Мужской '),
+(27, 'Емельянов Сергей ', 'Анкета ', 'Одноместный', '', 'Мужской '),
+(28, 'Емельянов Сергей ', 'Анкета ', 'Одноместный', '', 'Мужской '),
+(29, 'Емельянов Сергей ', 'Анкета ', 'Одноместный', '', 'Мужской '),
+(30, 'Емельянов Сергей ', '', 'Одноместный', 'Телевизор ', 'Мужской ');
 
 -- --------------------------------------------------------
 
@@ -82,10 +91,10 @@ CREATE TABLE IF NOT EXISTS `rang` (
 --
 
 INSERT INTO `rang` (`id`, `name1`, `manufacturer1`, `site1`, `date1`, `price1`) VALUES
-(1, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-17', 1000),
-(2, 'Туфли', 'Nike', 'http://bukinshoes.ru', '2019-05-18', 1000),
-(3, 'Кросы', 'Adidas', 'http://bukinshoes.ru', '2019-05-18', 5000),
-(4, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-09', 5000);
+(1, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-17', 1210),
+(2, 'Туфли', 'Nike', 'http://bukinshoes.ru', '2019-05-18', 1210),
+(3, 'Кросы', 'Adidas', 'http://bukinshoes.ru', '2019-05-18', 6050),
+(4, 'Тапочки', 'Puma', 'http://bukinshoes.ru', '2019-05-09', 6050);
 
 -- --------------------------------------------------------
 
@@ -127,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `sale` (
   `date3` date DEFAULT NULL,
   `email3` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Дамп данных таблицы `sale`
@@ -138,7 +147,38 @@ INSERT INTO `sale` (`id`, `shoes`, `number`, `date3`, `email3`) VALUES
 (2, 'Кроксы', 4, '2019-03-18', 'emelyanov@gmail.com'),
 (3, 'Туфли, Кроссовки, Тапки, Ботинки, Кроксы, Шлепки', 1, '2019-03-17', 'emelyanov@gmail.com'),
 (4, 'Кроксы', 4, '2019-03-18', 'emelyanov@gmail.com'),
-(5, 'Кроксы', 6, '2019-05-29', 'emelyanov@gmail.com');
+(5, 'Кроксы', 6, '2019-05-29', 'emelyanov@gmail.com'),
+(6, 'Кроксы', 1, '2019-05-20', 'emelyanov@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `secname` varchar(255) NOT NULL,
+  `age` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `rights` int(11) NOT NULL,
+  `blockdate` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `password`, `name`, `secname`, `age`, `email`, `rights`, `blockdate`) VALUES
+(1, 'admin', 'c6610c8c237449b283278827e63aa9d9', 'Сергей', 'Емельянов', 19, 'emelyanov@gmail.com', 1, 1558610659),
+(2, 'user', '35d3667416ce4c977de46e2ea17925f1', 'Иван', 'Иванов', 30, 'ivanov@gmail.com', 0, 0),
+(5, 'useruser', '059b4907e73149fa50436ff592924ce3', 'Сергей', 'Емельянов', 18, 'me@gmail.com', 0, 0),
+(7, 'qwerty', '54ab4e22e5b4f23ea132b4f6fd9f6633', 'Игорь', 'Емельянов', 40, '', 0, 0),
+(9, 'this', '38b05f8e6b39401b10cd4b22b9efe24a', 'Макс', 'Корж', 25, '', 0, 1558611000);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
