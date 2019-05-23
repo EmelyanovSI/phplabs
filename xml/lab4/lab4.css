@@ -1,0 +1,140 @@
+/*xml*/
+shoeShop {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.4s;
+}
+
+date {
+    margin: 10px;
+    padding: 20px;
+    background: #50fc5c;
+    border: 2px solid #2f3640;
+    border-radius: 100px;
+    font-size: x-large;
+    box-shadow: 0 0 4px 2px #ccc;
+    transition: inherit;
+}
+date:hover {
+    font-size: xx-large;
+}
+
+brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: inherit;
+}
+
+season {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 2px solid #2f3640;
+    padding: 10px;
+    transition: inherit;
+}
+season:hover {
+    box-shadow: 0 3px 9px 9px #ccc;
+    font-size: large;
+}
+
+gender {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+gender:first-child {
+    border-right: 2px solid #2f3640;
+}
+
+model {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+type > * {
+    padding: 0 5px;
+}
+
+end {
+    margin: 10px;
+    padding: 20px;
+    background: #50fc5c;
+    border: 2px solid #2f3640;
+    border-radius: 100px;
+    font-size: x-large;
+    box-shadow: 0 0 4px 2px #ccc;
+    transition: inherit;
+}
+end:hover {
+    font-size: xx-large;
+}
+
+image {
+    color: #fc505c;
+}
+
+color {
+    color: #50fc5c;
+}
+
+size {
+    color: mediumslateblue;
+}
+
+season[name="demi-season"] {
+    background: #ffffb0;
+}
+gender[sex="male"] > model > type > modelName {
+    color: dodgerblue;
+}
+gender[sex="female"] > model > type > modelName {
+    color: deeppink;
+}
+
+/*html*/
+table input {
+    outline: none;
+    width: 100px;
+    color: #2f3640;
+    background: #f1f3f4;
+    font-weight: bolder;
+    margin: 10px;
+    text-align: center;
+    text-align-last: center;
+    border: 5px solid #f1f3f4;
+    border-radius: 5px;
+    border-left: 3px solid;
+    transition: border-color 0.5s ease-out;
+}
+input[type="button"] {
+    outline: none;
+    padding: 10px;
+    margin: 0;
+    background: #2f3640;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+input[type="button"]:hover {
+    background: white;
+    color: #2f3640;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+xmp {
+    display: none;
+}

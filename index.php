@@ -34,11 +34,11 @@
                     <li><a href="xml/lab1/lab1.xml">xmlab1</a></li>
                     <li><a href="xml/lab2/lab2.xml">xmlab2</a></li>
                     <li><a href="xml/lab3/lab3.xml">xmlab3</a></li>
-                    <li><a href="xml/lab4/lab4.xml">xmlab4</a></li>
+                    <li><a href="xml/lab4/lab4.html">xmlab4</a></li>
                     <li><a href="xml/lab5/lab5.xml">xmlab5</a></li>
                     <li><a href="xml/lab6/lab6.xml">xmlab6</a></li>
                     <li><a href="kr1/add.php">phpKr1</a></li>
-                    <li><a href="kr2/">phpKr2</a></li>
+                    <li><a href="kr2/add.php">phpKr2</a></li>
                 </ul>
             </nav>
         </div>

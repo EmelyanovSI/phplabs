@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <title>xmlabs</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/lab1.css">
+    <link rel="stylesheet" href="../../styles/lab2.css">
+    <link rel="stylesheet" href="../../styles/lab3.css">
+    <link rel="stylesheet" href="lab4.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
+</head>
+
+<body>
+<header>
+    <div class="divHeader">
+        <a href="../../index.php"><img class="menuImg" src="../../images/greenBlockMenu.png" alt="menu img"></a>
+        <div class="title">
+            <span class="FIO">Emelyanov Sergey Igorevich</span>
+            <span class="option">Option16</span>
+        </div>
+        <form id="searchBox" action="" method="get">
+            <input id="searchText" type="search" name="searchText" placeholder="Search for labs!" autofocus>
+            <button id="searchBtn" type="button" value="search"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="indexSubMenuDiv">
+            <a href="../../index.php">
+                <img class="menuImg indexSubMenuDivImg" src="../../images/greenColumnMenu.png" alt="sub-menu img">
+            </a>
+            <nav class="indexSubNav">
+                <ul class="indexSubMenu">
+                    <li><a href="../../xml/lab1/lab1.xml">xmlab1</a></li>
+                    <li><a href="../../xml/lab2/lab2.xml">xmlab2</a></li>
+                    <li><a href="../../xml/lab3/lab3.xml">xmlab3</a></li>
+                    <li><a href="../../xml/lab4/lab4.html">xmlab4</a></li>
+                    <li><a href="../../xml/lab5/lab5.xml">xmlab5</a></li>
+                    <li><a href="../../xml/lab6/lab6.xml">xmlab6</a></li>
+                    <li><a href="../../kr1/add.php">phpKr1</a></li>
+                    <li><a href="../../kr2/add.php">phpKr2</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <nav class="navHeader">
+        <ul class="mainMenu">
+            <li><a href="../../lab1/form1.php">Form</a></li>
+            <li><a href="../../lab2/add.php">Text file</a></li>
+            <li><a href="../../lab3/cookies.php">Cookies</a></li>
+            <li><a href="../../lab4/shop.php">Session</a></li>
+            <li><a href="../../lab5/regular.html">Regular</a></li>
+            <li><a href="../../lab6/add.php">Authorization</a></li>
+            <li><a href="../../lab7/add.php">Database</a></li>
+            <li><a href="../../lab8/add.php">Registration and database</a></li>
+        </ul>
+    </nav>
+</header>
+
+<nav class="subNav">
+    <p class="mainP"><a href="lab4.html"><span>&emsp14;XML&emsp14;</span>lab 4!</a></p>
+</nav>
+
+<main>
+
+    <div id='xmlDiv'>
+
+    </div>
+
+    <div id='tableDiv'>
+
+    </div>
+
+    <div class="forms">
+        <form name="form" id="form">
+            <fieldset>
+                <legend>Добавление товара</legend>
+
+                <label for='seasonAdd'>Сезон</label>
+                <select id='seasonAdd'>
+                    <option value='summer'>Летний</option>
+                    <option value='winter'>Зимний</option>
+                    <option value='demi-season'>Деми</option>
+                </select>
+
+                <label for='genderAdd'>Пол</label>
+                <select id='genderAdd'>
+                    <option value='male'>Мужская</option>
+                    <option value='female'>Женская</option>
+                </select>
+
+                <label for='modelAdd'>Модель</label>
+                <input type='text' id='modelAdd'>
+
+                <label for='typeAdd'>ID</label>
+                <input type='text' id='typeAdd'>
+
+                <label for='modelNameAdd'>Название модели</label>
+                <input type='text' id='modelNameAdd'>
+
+                <label for='imageAdd'>Ссылка на фото</label>
+                <input type='text' id='imageAdd'>
+
+                <label for='weightAdd'>Вес</label>
+                <input type='number' value='10' step='1' id='weightAdd'>
+
+                <label for='heightAdd'>Длина</label>
+                <input type='number' value='12' step='1' id='heightAdd'>
+
+                <label for='widthAdd'>Ширина</label>
+                <input type='number' value='10' step='1' id='widthAdd'>
+
+                <label for='topAdd'>Высота</label>
+                <input type='number' value='5' step='1' id='topAdd'>
+
+                <label for='priceAdd'>Цена</label>
+                <input type='number' value='50' step='10' id='priceAdd'>
+
+                <label for='colorAdd'>Цвет</label>
+                <input type='text' id='colorAdd'>
+
+                <label for='descriptionAdd'>Описание</label>
+                <input type='text' id='descriptionAdd'>
+            </fieldset>
+            <input type='button' value='Добавить' onclick='add();'>
+        </form>
+    </div>
+
+</main>
+
+<!--<aside>
+
+</aside>-->
+
+<footer>
+    <span>Emelyanov Sergey ITS-21<sup>&#169;</sup></span>
+    <span>
+            E-mail:
+            <a href="mailto: emelyanovsergeyofficial@gmail.com" target="_blank" title="Emelyanov Sergey">
+                emelyanovsergeyofficial@gmail.com
+            </a>
+        </span>
+</footer>
+
+<script src="../../scripts/main.js" type="text/javascript" language="JavaScript"></script>
+<script src="../../scripts/jquery-3.4.0.js" type="text/javascript" language="JavaScript"></script>
+<script src="../../scripts/navigation.js" type="text/javascript" language="JavaScript"></script>
+<script src="lab4.js" type="text/javascript" language="JavaScript"></script>
+
+</body>
+
+</html>
