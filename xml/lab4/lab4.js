@@ -62,18 +62,43 @@ function buildTable() {
             '<td>' +
             '<input type="text" id="weight' + i + '" value="' + objNodeList.item(i).childNodes.item(2).firstChild.nodeValue + '">' +
             '</td>';
-        height =
-            '<td>' +
-            '<input type="text" id="height' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(0).firstChild.nodeValue + '">' +
-            '</td>';
-        width =
-            '<td>' +
-            '<input type="text" id="width' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(1).firstChild.nodeValue + '">' +
-            '</td>';
-        topTop =
-            '<td>' +
-            '<input type="text" id="topTop' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(2).firstChild.nodeValue + '">' +
-            '</td>';
+        try {
+            height =
+                '<td>' +
+                '<input type="text" id="height' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(0).firstChild.nodeValue + '">' +
+                '</td>';
+        } catch (e) {
+            height =
+                '<td>' +
+                'error' +
+                // '<input type="text" id="height' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(0).firstChild.nodeValue + '">' +
+                '</td>';
+        }
+        try {
+            width =
+                '<td>' +
+                '<input type="text" id="width' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(1).firstChild.nodeValue + '">' +
+                '</td>';
+        } catch (e) {
+            width =
+                '<td>' +
+                'new' +
+                // '<input type="text" id="width' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(1).firstChild.nodeValue + '">' +
+                '</td>';
+        }
+        try {
+            topTop =
+                '<td>' +
+                '<input type="text" id="topTop' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(2).firstChild.nodeValue + '">' +
+                '</td>';
+        }
+        catch (e) {
+            topTop =
+                '<td>' +
+                'new' +
+                // '<input type="text" id="topTop' + i + '" value="' + objNodeList.item(i).childNodes.item(3).childNodes.item(2).firstChild.nodeValue + '">' +
+                '</td>';
+        }
         price =
             '<td>' +
             '<input type="text" id="price' + i + '"  value="' + objNodeList.item(i).childNodes.item(4).firstChild.nodeValue + '">' +
@@ -124,9 +149,9 @@ function change(num) {
     newElem.childNodes.item(0).firstChild.nodeValue = modelName;
     newElem.childNodes.item(1).firstChild.nodeValue = image;
     newElem.childNodes.item(2).firstChild.nodeValue = weight;
-    newElem.childNodes.item(3).childNodes.item(0).nodeValue = height;
-    newElem.childNodes.item(3).childNodes.item(1).nodeValue = width;
-    newElem.childNodes.item(3).childNodes.item(2).nodeValue = topTop;
+    newElem.childNodes.item(3).childNodes.item(0).firstChild.nodeValue = height;
+    newElem.childNodes.item(3).childNodes.item(1).firstChild.nodeValue = width;
+    newElem.childNodes.item(3).childNodes.item(2).firstChild.nodeValue = topTop;
     newElem.childNodes.item(4).firstChild.nodeValue = price;
     newElem.childNodes.item(5).firstChild.nodeValue = color;
     newElem.childNodes.item(6).firstChild.nodeValue = description;

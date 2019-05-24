@@ -1,0 +1,26 @@
+<!ELEMENT shoeShop (season+)>
+        <!ATTLIST shoeShop company (bukin.com)>
+
+        <!ELEMENT season (gender+)>
+        <!ATTLIST season name (summer|winter|demi-season) "demi-season">
+
+        <!ELEMENT gender (type*|model?)+>
+        <!ATTLIST gender sex (male|female) CDATA #REQUIRED>
+
+        <!ELEMENT model (type*)>
+        <!ATTLIST model name CDATA #IMPLIED>
+
+        <!ELEMENT type (modelName, image, weight, size, price, color, description)>
+        <!ATTLIST type id>
+
+        <!ELEMENT modelName (#PCDATA)>
+        <!ELEMENT image (#PCDATA)>
+        <!ELEMENT weight (#PCDATA)>
+        <!ELEMENT size (height, width, top)>
+        <!ELEMENT height (#PCDATA)>
+        <!ELEMENT width (#PCDATA)>
+        <!ELEMENT top (#PCDATA)>
+
+        <!ELEMENT price (#PCDATA)>
+        <!ELEMENT color (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>

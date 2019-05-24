@@ -1,0 +1,69 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="limitedString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="13"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="thisLimit">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="sizeType">
+        <xs:sequence>
+            <xs:element name="height" type="xs:integer"/>
+            <xs:element name="width" type="xs:integer"/>
+            <xs:element name="top" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="typeType">
+        <xs:sequence>
+            <xs:element name="modelName" type="xs:string"/>
+            <xs:element name="image" type="xs:string"/>
+            <xs:element name="weight" type="xs:integer"/>
+
+            <xs:element name="size" type="sizeType"/>
+
+            <xs:element name="price" type="thisLimit"/>
+            <xs:element name="color" type="limitedString"/>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="modelType">
+        <xs:sequence>
+            <xs:element name="type" maxOccurs="unbounded" type="typeType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="genderType">
+        <xs:sequence>
+            <xs:element name="model" maxOccurs="unbounded" type="modelType"/>
+        </xs:sequence>
+        <xs:attribute name="sex" type="xs:string" use="required"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="seasonType">
+        <xs:sequence>
+            <xs:element name="gender" maxOccurs="unbounded" type="genderType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="shoeShopType">
+        <xs:sequence>
+            <xs:element name="season" maxOccurs="unbounded" type="seasonType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="shoeShop" type="shoeShopType"/>
+
+</xs:schema>
